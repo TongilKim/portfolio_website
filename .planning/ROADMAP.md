@@ -47,13 +47,17 @@ Plans:
 ### Phase 3: Contact Form Functionality
 **Goal**: Working contact form with validation that sends quote requests
 **Depends on**: Phase 2
-**Research**: Likely (external service integration)
-**Research topics**: Formspree vs EmailJS vs Resend, form validation with react-hook-form + zod
-**Plans**: TBD
+**Research**: Complete (Formspree selected)
+**Research findings**:
+- **Email service**: Formspree (best for static sites, no backend required, built-in spam protection)
+- **Form validation**: react-hook-form + Zod + @hookform/resolvers
+- **Alternatives considered**: EmailJS (exposes API keys), Resend (requires backend)
+- **Free tier**: 50 submissions/month (sufficient for freelance portfolio)
+**Plans**: 2
 
 Plans:
-- [ ] 03-01: Add form validation with error messages
-- [ ] 03-02: Integrate email service for form submission
+- [ ] 03-01: Add form validation with Zod + react-hook-form (client-side validation, bilingual errors)
+- [ ] 03-02: Integrate Formspree for email submission (API integration, loading/success/error states)
 
 ### Phase 4: Services & Pricing Page
 **Goal**: Dedicated page showcasing services with clear custom quote call-to-action
