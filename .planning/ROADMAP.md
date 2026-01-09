@@ -36,13 +36,13 @@ Plans:
 ### Phase 2: Content Localization
 **Goal**: Translate all UI text to Korean and replace placeholder content with real business data
 **Depends on**: Phase 1
-**Research**: Unlikely (uses patterns from Phase 1)
-**Plans**: TBD
+**Research**: Not needed
+**Plans**: 3
 
 Plans:
-- [ ] 02-01: Extract all hardcoded text to translation files (English)
+- [ ] 02-01: Extract hardcoded text to translation files
 - [ ] 02-02: Add Korean translations
-- [ ] 02-03: Replace placeholder business data (contact info, portfolio items)
+- [ ] 02-03: Replace placeholder business data
 
 ### Phase 3: Contact Form Functionality
 **Goal**: Working contact form with validation that sends quote requests
@@ -95,7 +95,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Localization Foundation | 2/2 | Complete | 2026-01-09 |
-| 2. Content Localization | 0/3 | Not started | - |
+| 2. Content Localization | 0/3 | Planned | - |
 | 3. Contact Form Functionality | 0/2 | Not started | - |
 | 4. Services & Pricing Page | 0/2 | Not started | - |
 | 5. Additional Pages | 0/3 | Not started | - |
