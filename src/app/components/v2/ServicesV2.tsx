@@ -1,27 +1,18 @@
-const services = [
-  {
-    title: "Web Development",
-    description: "Custom websites built with modern technologies. Responsive and performant."
-  },
-  {
-    title: "Design",
-    description: "Clean, user-focused design that serves your business goals."
-  },
-  {
-    title: "E-Commerce",
-    description: "Online stores with payment integration and product management."
-  },
-  {
-    title: "Maintenance",
-    description: "Ongoing support and updates to keep your site running smoothly."
-  }
-];
+import { useTranslation } from "react-i18next";
+
+interface ServiceItem {
+  title: string;
+  description: string;
+}
 
 export function ServicesV2() {
+  const { t } = useTranslation();
+  const services = t('servicesV2.items', { returnObjects: true }) as ServiceItem[];
+
   return (
     <section id="services" className="bg-gray-50 border-y">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-        <h2 className="text-3xl md:text-4xl mb-16">What I do</h2>
+        <h2 className="text-3xl md:text-4xl mb-16">{t('servicesV2.title')}</h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {services.map((service, index) => (

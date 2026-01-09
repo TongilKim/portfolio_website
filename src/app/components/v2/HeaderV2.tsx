@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export function HeaderV2() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -16,21 +18,21 @@ export function HeaderV2() {
     <header className="border-b bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          <div className="text-xl">WebCraft</div>
-          
+          <div className="text-xl">{t('app.title')}</div>
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <button onClick={() => scrollToSection("home")} className="hover:underline">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection("services")} className="hover:underline">
-              Services
+              {t('nav.services')}
             </button>
             <button onClick={() => scrollToSection("work")} className="hover:underline">
-              Work
+              {t('nav.work')}
             </button>
             <button onClick={() => scrollToSection("contact")} className="hover:underline">
-              Contact
+              {t('nav.contact')}
             </button>
             <LanguageSwitcher />
           </nav>
@@ -40,7 +42,7 @@ export function HeaderV2() {
             className="md:hidden text-sm"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? "Close" : "Menu"}
+            {isMenuOpen ? t('nav.close') : t('nav.menu')}
           </button>
         </div>
 
@@ -48,16 +50,16 @@ export function HeaderV2() {
         {isMenuOpen && (
           <nav className="md:hidden pb-6 flex flex-col gap-4 text-sm">
             <button onClick={() => scrollToSection("home")} className="text-left">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection("services")} className="text-left">
-              Services
+              {t('nav.services')}
             </button>
             <button onClick={() => scrollToSection("work")} className="text-left">
-              Work
+              {t('nav.work')}
             </button>
             <button onClick={() => scrollToSection("contact")} className="text-left">
-              Contact
+              {t('nav.contact')}
             </button>
             <div className="pt-2 border-t">
               <LanguageSwitcher />

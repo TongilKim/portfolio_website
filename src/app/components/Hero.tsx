@@ -1,8 +1,11 @@
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -24,42 +27,41 @@ export function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full">
               <Sparkles size={16} />
-              <span className="text-sm">Professional Web Development</span>
+              <span className="text-sm">{t('hero.badge')}</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl">
-              Transform Your Vision Into
-              <span className="text-blue-600"> Reality</span>
+              {t('hero.title')}
+              <span className="text-blue-600"> {t('hero.titleHighlight')}</span>
             </h1>
-            
+
             <p className="text-xl text-gray-600">
-              I create stunning, responsive websites that help your business grow. 
-              From concept to launch, I'll bring your digital dreams to life.
+              {t('hero.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" onClick={scrollToContact} className="gap-2">
-                Start Your Project
+                {t('hero.cta.start')}
                 <ArrowRight size={20} />
               </Button>
               <Button size="lg" variant="outline" onClick={scrollToPortfolio} className="gap-2">
                 <Code2 size={20} />
-                View Portfolio
+                {t('hero.cta.portfolio')}
               </Button>
             </div>
 
             <div className="grid grid-cols-3 gap-8 pt-8 border-t">
               <div>
-                <div className="text-3xl font-bold text-blue-600">50+</div>
-                <div className="text-sm text-gray-600">Projects Completed</div>
+                <div className="text-3xl font-bold text-blue-600">{t('hero.stats.projects')}</div>
+                <div className="text-sm text-gray-600">{t('hero.stats.projectsLabel')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-600">100%</div>
-                <div className="text-sm text-gray-600">Client Satisfaction</div>
+                <div className="text-3xl font-bold text-blue-600">{t('hero.stats.satisfaction')}</div>
+                <div className="text-sm text-gray-600">{t('hero.stats.satisfactionLabel')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-blue-600">5+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-3xl font-bold text-blue-600">{t('hero.stats.experience')}</div>
+                <div className="text-sm text-gray-600">{t('hero.stats.experienceLabel')}</div>
               </div>
             </div>
           </div>

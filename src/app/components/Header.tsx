@@ -1,10 +1,12 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,31 +20,31 @@ export function Header() {
     <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-blue-600">WebCraft</div>
-          
+          <div className="text-2xl font-bold text-blue-600">{t('app.title')}</div>
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
             <button onClick={() => scrollToSection("home")} className="hover:text-blue-600 transition-colors">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection("services")} className="hover:text-blue-600 transition-colors">
-              Services
+              {t('nav.services')}
             </button>
             <button onClick={() => scrollToSection("portfolio")} className="hover:text-blue-600 transition-colors">
-              Portfolio
+              {t('nav.portfolio')}
             </button>
             <button onClick={() => scrollToSection("about")} className="hover:text-blue-600 transition-colors">
-              About
+              {t('nav.about')}
             </button>
             <button onClick={() => scrollToSection("contact")} className="hover:text-blue-600 transition-colors">
-              Contact
+              {t('nav.contact')}
             </button>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
             <Button onClick={() => scrollToSection("contact")}>
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </div>
 
@@ -59,19 +61,19 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden pb-4 flex flex-col gap-4">
             <button onClick={() => scrollToSection("home")} className="text-left hover:text-blue-600 transition-colors">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection("services")} className="text-left hover:text-blue-600 transition-colors">
-              Services
+              {t('nav.services')}
             </button>
             <button onClick={() => scrollToSection("portfolio")} className="text-left hover:text-blue-600 transition-colors">
-              Portfolio
+              {t('nav.portfolio')}
             </button>
             <button onClick={() => scrollToSection("about")} className="text-left hover:text-blue-600 transition-colors">
-              About
+              {t('nav.about')}
             </button>
             <button onClick={() => scrollToSection("contact")} className="text-left hover:text-blue-600 transition-colors">
-              Contact
+              {t('nav.contact')}
             </button>
             <div className="pt-2 border-t">
               <LanguageSwitcher />
@@ -80,7 +82,7 @@ export function Header() {
               onClick={() => scrollToSection("contact")}
               className="w-full"
             >
-              Get Started
+              {t('nav.getStarted')}
             </Button>
           </nav>
         )}
