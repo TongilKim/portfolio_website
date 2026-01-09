@@ -1,0 +1,11 @@
+{
+  "app": {
+    "title": "웹크래프트",
+    "description": "전문 웹 개발 서비스"
+  },
+  "language": {
+    "en": "English",
+    "ko": "한국어",
+    "switch": "언어"
+  }
+}

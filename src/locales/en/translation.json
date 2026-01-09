@@ -1,0 +1,11 @@
+{
+  "app": {
+    "title": "WebCraft",
+    "description": "Professional Web Development Services"
+  },
+  "language": {
+    "en": "English",
+    "ko": "한국어",
+    "switch": "Language"
+  }
+}
