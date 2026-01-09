@@ -1,11 +1,214 @@
 {
   "app": {
-    "title": "웹크래프트",
+    "title": "WebCraft",
     "description": "전문 웹 개발 서비스"
   },
   "language": {
     "en": "English",
     "ko": "한국어",
     "switch": "언어"
+  },
+  "nav": {
+    "home": "홈",
+    "services": "서비스",
+    "portfolio": "포트폴리오",
+    "work": "작업물",
+    "about": "소개",
+    "contact": "문의",
+    "getStarted": "시작하기",
+    "menu": "메뉴",
+    "close": "닫기"
+  },
+  "hero": {
+    "badge": "전문 웹 개발",
+    "title": "당신의 비전을",
+    "titleHighlight": "현실로",
+    "description": "비즈니스 성장을 돕는 멋진 반응형 웹사이트를 제작합니다. 구상부터 런칭까지, 디지털 꿈을 실현해 드립니다.",
+    "cta": {
+      "start": "프로젝트 시작하기",
+      "portfolio": "포트폴리오 보기"
+    },
+    "stats": {
+      "projects": "50+",
+      "projectsLabel": "완료된 프로젝트",
+      "satisfaction": "100%",
+      "satisfactionLabel": "고객 만족도",
+      "experience": "5+",
+      "experienceLabel": "년 경력"
+    }
+  },
+  "heroV2": {
+    "title": "비즈니스를 위한 웹사이트를 만듭니다",
+    "description": "깔끔하고 기능적인 웹 디자인과 개발. 비즈니스의 온라인 입지 구축을 도와드립니다.",
+    "cta": "문의하기"
+  },
+  "services": {
+    "title": "제공 서비스",
+    "description": "온라인 비즈니스 성공을 위한 종합 웹 개발 솔루션",
+    "items": [
+      {
+        "title": "맞춤형 웹사이트 개발",
+        "description": "고객의 고유한 요구사항과 브랜드 아이덴티티에 맞춘 완벽한 반응형 커스텀 웹사이트를 제작합니다."
+      },
+      {
+        "title": "UI/UX 디자인",
+        "description": "사용자를 사로잡고 기억에 남는 경험을 선사하는 아름답고 직관적인 디자인을 제공합니다."
+      },
+      {
+        "title": "이커머스 솔루션",
+        "description": "안전한 결제 시스템 연동과 재고 관리 기능을 갖춘 완벽한 온라인 쇼핑몰을 구축합니다."
+      },
+      {
+        "title": "모바일 퍼스트 디자인",
+        "description": "모바일, 태블릿, 데스크톱 모든 기기에서 완벽하게 작동하는 최적화된 웹사이트를 제작합니다."
+      },
+      {
+        "title": "SEO 최적화",
+        "description": "검색 엔진 상위 노출을 통해 더 많은 고객을 유치할 수 있는 최적화된 웹사이트를 구축합니다."
+      },
+      {
+        "title": "성능 최적화",
+        "description": "빠른 로딩 속도와 최적의 성능으로 더 나은 사용자 경험과 전환율을 제공합니다."
+      }
+    ]
+  },
+  "servicesV2": {
+    "title": "제공 서비스",
+    "items": [
+      {
+        "title": "웹 개발",
+        "description": "최신 기술로 구축하는 맞춤형 웹사이트. 반응형이며 고성능입니다."
+      },
+      {
+        "title": "디자인",
+        "description": "비즈니스 목표에 부합하는 깔끔하고 사용자 중심적인 디자인."
+      },
+      {
+        "title": "이커머스",
+        "description": "결제 시스템 연동과 상품 관리 기능을 갖춘 온라인 쇼핑몰."
+      },
+      {
+        "title": "유지보수",
+        "description": "사이트의 원활한 운영을 위한 지속적인 지원과 업데이트."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "주요 프로젝트",
+    "description": "웹 개발 전문성을 보여주는 최근 작업물 모음",
+    "projects": [
+      {
+        "title": "모던 포트폴리오 웹사이트",
+        "description": "부드러운 애니메이션과 반응형 디자인을 갖춘 크리에이터를 위한 세련된 포트폴리오 사이트."
+      },
+      {
+        "title": "이커머스 쇼핑몰",
+        "description": "상품 관리, 장바구니 기능, 안전한 결제 시스템을 갖춘 완전한 온라인 쇼핑몰."
+      },
+      {
+        "title": "모바일 앱 랜딩 페이지",
+        "description": "다운로드 추적과 분석 기능을 갖춘 모바일 앱용 시선을 사로잡는 랜딩 페이지."
+      }
+    ]
+  },
+  "workV2": {
+    "title": "주요 작업물",
+    "projects": [
+      {
+        "title": "포트폴리오 사이트",
+        "type": "디자인 & 개발"
+      },
+      {
+        "title": "온라인 쇼핑몰",
+        "type": "이커머스"
+      },
+      {
+        "title": "앱 랜딩 페이지",
+        "type": "마케팅 사이트"
+      }
+    ]
+  },
+  "about": {
+    "title": "소개",
+    "paragraphs": [
+      "5년 이상의 경력을 가진 열정적인 프리랜서 웹 개발자로서, 전 세계 고객들을 위해 아름답고 기능적인 웹사이트를 제작해왔습니다.",
+      "기술적 전문성과 창의적인 디자인 사고를 결합하여, 보기 좋을 뿐만 아니라 실질적인 비즈니스 성과를 이끌어내는 웹사이트를 제공합니다.",
+      "첫 웹사이트를 찾는 스타트업이든, 온라인 입지를 강화하려는 기존 기업이든, 성공을 도와드리겠습니다."
+    ],
+    "skillsTitle": "기술 스택",
+    "skills": [
+      "React & Next.js",
+      "TypeScript & JavaScript",
+      "Tailwind CSS & Styled Components",
+      "반응형 디자인",
+      "SEO & 성능 최적화",
+      "이커머스 솔루션",
+      "RESTful APIs",
+      "Git & 버전 관리"
+    ],
+    "quote": "성공은 사용하는 도구가 아니라, 그 도구로 실제 사람들의 실제 문제를 어떻게 해결하느냐에 달려 있습니다."
+  },
+  "contact": {
+    "title": "함께 일해요",
+    "description": "프로젝트를 시작할 준비가 되셨나요? 연락 주시면 멋진 것을 함께 만들어 봐요",
+    "getInTouch": {
+      "title": "문의하기",
+      "description": "양식을 작성해 주시면 24시간 이내에 답변 드리겠습니다. 아래 연락처로 직접 연락하셔도 됩니다."
+    },
+    "info": {
+      "emailLabel": "이메일",
+      "email": "hello@webcraft.com",
+      "phoneLabel": "전화",
+      "phone": "+1 (555) 123-4567",
+      "locationLabel": "위치",
+      "location": "전 세계 어디서든 가능"
+    },
+    "form": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "email": "이메일 주소",
+      "emailPlaceholder": "hong@example.com",
+      "project": "프로젝트 유형",
+      "projectPlaceholder": "이커머스 웹사이트, 포트폴리오 등",
+      "message": "프로젝트 상세",
+      "messagePlaceholder": "프로젝트에 대해 알려주세요...",
+      "submit": "메시지 보내기"
+    }
+  },
+  "contactV2": {
+    "title": "상담하기",
+    "description": "프로젝트가 있으신가요? 메시지를 보내주시면 24시간 이내에 답변 드리겠습니다.",
+    "info": {
+      "emailLabel": "이메일",
+      "email": "hello@webcraft.com",
+      "phoneLabel": "전화",
+      "phone": "+1 (555) 123-4567"
+    },
+    "form": {
+      "name": "이름",
+      "email": "이메일",
+      "message": "메시지",
+      "submit": "메시지 보내기"
+    }
+  },
+  "footer": {
+    "description": "비즈니스 성장을 돕는 아름답고 기능적인 웹사이트를 제작합니다. 당신의 비전을 현실로 만들어 드립니다.",
+    "quickLinks": "바로가기",
+    "servicesTitle": "서비스",
+    "servicesList": [
+      "웹 개발",
+      "UI/UX 디자인",
+      "이커머스",
+      "SEO"
+    ],
+    "copyright": "WebCraft. All rights reserved."
+  },
+  "footerV2": {
+    "copyright": "All rights reserved",
+    "social": {
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
   }
 }
