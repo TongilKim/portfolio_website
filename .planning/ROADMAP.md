@@ -69,15 +69,15 @@ Plans:
 - [x] 04-01: Enhance Services section with CTA-focused cards (project types, "ideal for" descriptions, quote CTAs)
 
 ### Phase 5: Additional Pages
-**Goal**: Supporting pages that build trust and explain process
+**Goal**: Information hub with separate FAQ, Process, and About pages
 **Depends on**: Phase 4
-**Research**: Unlikely (internal UI work)
-**Plans**: TBD
+**Research**: Complete (routing patterns explored)
+**Plans**: 3
 
 Plans:
-- [ ] 05-01: Create FAQ page
-- [ ] 05-02: Create Process/How It Works page
-- [ ] 05-03: Enhance About page with more detail
+- [ ] 05-01: Add routing infrastructure and create FAQ page (accordion-style, bilingual)
+- [ ] 05-02: Create Process/How It Works page (visual step-by-step, client experience)
+- [ ] 05-03: Enhance About page (dedicated page with expanded content)
 
 ### Phase 6: Polish & Optimization
 **Goal**: Production-ready site with optimized performance and SEO
@@ -101,5 +101,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Content Localization | 3/3 | Complete | 2026-01-09 |
 | 3. Contact Form Functionality | 2/2 | Complete | 2026-01-09 |
 | 4. Services & Pricing Page | 1/1 | Complete | 2026-01-09 |
-| 5. Additional Pages | 0/3 | Not started | - |
+| 5. Additional Pages | 0/3 | In progress | - |
 | 6. Polish & Optimization | 0/3 | Not started | - |
