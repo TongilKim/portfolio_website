@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export function HeaderV2() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export function HeaderV2() {
           <div className="text-xl">WebCraft</div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-8 text-sm">
+          <nav className="hidden md:flex items-center gap-8 text-sm">
             <button onClick={() => scrollToSection("home")} className="hover:underline">
               Home
             </button>
@@ -31,6 +32,7 @@ export function HeaderV2() {
             <button onClick={() => scrollToSection("contact")} className="hover:underline">
               Contact
             </button>
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -57,6 +59,9 @@ export function HeaderV2() {
             <button onClick={() => scrollToSection("contact")} className="text-left">
               Contact
             </button>
+            <div className="pt-2 border-t">
+              <LanguageSwitcher />
+            </div>
           </nav>
         )}
       </div>

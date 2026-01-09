@@ -31,7 +31,7 @@ None
 
 Plans:
 - [x] 01-01: Install and configure i18n library
-- [ ] 01-02: Create language switcher component
+- [x] 01-02: Create language switcher component
 
 ### Phase 2: Content Localization
 **Goal**: Translate all UI text to Korean and replace placeholder content with real business data
@@ -94,7 +94,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Localization Foundation | 1/2 | In Progress | - |
+| 1. Localization Foundation | 2/2 | Complete | 2026-01-09 |
 | 2. Content Localization | 0/3 | Not started | - |
 | 3. Contact Form Functionality | 0/2 | Not started | - |
 | 4. Services & Pricing Page | 0/2 | Not started | - |

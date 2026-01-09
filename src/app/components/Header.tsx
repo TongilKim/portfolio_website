@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,12 +39,12 @@ export function Header() {
             </button>
           </nav>
 
-          <Button
-            onClick={() => scrollToSection("contact")}
-            className="hidden md:block"
-          >
-            Get Started
-          </Button>
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
+            <Button onClick={() => scrollToSection("contact")}>
+              Get Started
+            </Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -72,6 +73,9 @@ export function Header() {
             <button onClick={() => scrollToSection("contact")} className="text-left hover:text-blue-600 transition-colors">
               Contact
             </button>
+            <div className="pt-2 border-t">
+              <LanguageSwitcher />
+            </div>
             <Button
               onClick={() => scrollToSection("contact")}
               className="w-full"
