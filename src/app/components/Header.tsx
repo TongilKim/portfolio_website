@@ -47,6 +47,9 @@ export function Header() {
             <Link to="/faq" className="hover:text-blue-600 transition-colors">
               {t('nav.faq')}
             </Link>
+            <Link to="/process" className="hover:text-blue-600 transition-colors">
+              {t('nav.process')}
+            </Link>
             <button onClick={() => scrollToSection("contact")} className="hover:text-blue-600 transition-colors">
               {t('nav.contact')}
             </button>
@@ -85,6 +88,9 @@ export function Header() {
             </button>
             <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
               {t('nav.faq')}
+            </Link>
+            <Link to="/process" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
+              {t('nav.process')}
             </Link>
             <button onClick={() => scrollToSection("contact")} className="text-left hover:text-blue-600 transition-colors">
               {t('nav.contact')}

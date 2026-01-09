@@ -16,6 +16,7 @@
     "about": "About",
     "contact": "Contact",
     "faq": "FAQ",
+    "process": "Process",
     "getStarted": "Get Started",
     "menu": "Menu",
     "close": "Close"
@@ -240,6 +241,48 @@
     "message": {
       "min": "Message must be at least 10 characters",
       "max": "Message must be less than 1000 characters"
+    }
+  },
+  "process": {
+    "title": "How I Work",
+    "description": "From first conversation to launch, here's what to expect when we work together",
+    "step": "Step",
+    "clientLabel": "What you'll experience:",
+    "phases": [
+      {
+        "title": "Discovery",
+        "description": "We start with a conversation about your goals, audience, and vision. I'll ask questions to understand what success looks like for your project and identify any technical requirements.",
+        "clientExperience": "A casual 30-minute call where you share your ideas and I listen. No pressure, just getting to know your project."
+      },
+      {
+        "title": "Design",
+        "description": "Based on our discovery call, I create mockups and wireframes showing the look and feel of your site. We iterate until you're excited about the direction.",
+        "clientExperience": "You'll receive visual mockups to review. Share feedback, and I'll refine until it feels right."
+      },
+      {
+        "title": "Development",
+        "description": "I build your site using modern, performant technologies. You'll get regular progress updates and a preview link to see the site come together.",
+        "clientExperience": "Watch your site take shape with weekly updates. Test it yourself and let me know what to adjust."
+      },
+      {
+        "title": "Launch",
+        "description": "Final testing, optimization, and deployment. I handle all the technical details and make sure everything works perfectly before going live.",
+        "clientExperience": "A smooth handoff with training on how to update your site. Ongoing support available if needed."
+      }
+    ],
+    "timeline": {
+      "title": "Typical Timelines",
+      "items": [
+        { "type": "Landing Page", "duration": "1-2 weeks" },
+        { "type": "Portfolio", "duration": "2-3 weeks" },
+        { "type": "E-commerce", "duration": "4-6 weeks" },
+        { "type": "Web App", "duration": "6-8 weeks" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "description": "Let's discuss your project and see how I can help.",
+      "button": "Start a Conversation"
     }
   },
   "faq": {
