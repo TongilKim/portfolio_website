@@ -1,5 +1,6 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export function About() {
   const { t } = useTranslation();
@@ -17,6 +18,13 @@ export function About() {
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
+            <Link
+              to="/about"
+              className="inline-flex items-center mt-6 text-blue-600 font-medium hover:underline"
+            >
+              {t('about.learnMore')}
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
           </div>
 
           <div>

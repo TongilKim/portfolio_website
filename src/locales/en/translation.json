@@ -140,6 +140,7 @@
   },
   "about": {
     "title": "About Me",
+    "learnMore": "Learn more about me",
     "paragraphs": [
       "I'm a passionate freelance web developer with over 5 years of experience creating beautiful, functional websites for clients worldwide.",
       "My approach combines technical expertise with creative design thinking to deliver websites that not only look great but also drive real business results.",
@@ -241,6 +242,56 @@
     "message": {
       "min": "Message must be at least 10 characters",
       "max": "Message must be less than 1000 characters"
+    }
+  },
+  "aboutPage": {
+    "title": "About Me",
+    "subtitle": "A passionate developer helping businesses succeed online",
+    "story": {
+      "title": "My Story",
+      "paragraphs": [
+        "I've been building websites for over 5 years, working with clients ranging from solo entrepreneurs to growing businesses. My journey started with a simple curiosity about how websites work, and grew into a passion for creating digital experiences that make a real difference.",
+        "What drives me isn't just writing code—it's seeing the impact a well-crafted website has on someone's business. There's nothing quite like launching a project and watching it help a client reach new customers, streamline their work, or finally have that professional online presence they've been dreaming of.",
+        "I believe in doing things right, even when no one's watching. That means clean code, thoughtful design decisions, and always putting the user experience first. Every project is an opportunity to create something meaningful."
+      ]
+    },
+    "valuesTitle": "How I Work",
+    "values": [
+      {
+        "title": "Quality Over Speed",
+        "description": "I'd rather take a bit more time to do something right than rush and create problems later. Your website should be built to last."
+      },
+      {
+        "title": "Clear Communication",
+        "description": "No jargon, no surprises. I explain things in plain language and keep you updated throughout the process."
+      },
+      {
+        "title": "Partner Mindset",
+        "description": "I'm not just a contractor—I'm invested in your success. Your goals become my goals."
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Web technology evolves fast. I stay current so you get modern, future-proof solutions."
+      }
+    ],
+    "skillsTitle": "Skills & Technologies",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Responsive Design",
+      "SEO Optimization",
+      "E-commerce",
+      "API Integration"
+    ],
+    "quote": "The best websites aren't just pretty—they solve real problems for real people.",
+    "cta": {
+      "title": "Let's Build Something Together",
+      "description": "Whether you have a clear vision or just a rough idea, I'd love to hear about your project.",
+      "button": "Start a Conversation"
     }
   },
   "process": {
