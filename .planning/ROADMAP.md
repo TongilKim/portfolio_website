@@ -17,7 +17,7 @@ None
 - [x] **Phase 1: Localization Foundation** - Set up i18n infrastructure for English + Korean
 - [x] **Phase 2: Content Localization** - Translate all UI text and replace placeholder content
 - [x] **Phase 3: Contact Form Functionality** - Add form validation and submission handler
-- [ ] **Phase 4: Services & Pricing Page** - Create dedicated pricing page with custom quote CTA
+- [x] **Phase 4: Services & Pricing Page** - Enhance Services section with CTA-focused cards
 - [ ] **Phase 5: Additional Pages** - FAQ, Process/How It Works, detailed About page
 - [ ] **Phase 6: Polish & Optimization** - Image optimization, SEO meta tags, final QA
 
@@ -60,13 +60,13 @@ Plans:
 - [x] 03-02: Integrate Formspree for email submission (API integration, loading/success/error states)
 
 ### Phase 4: Services & Pricing Page
-**Goal**: Dedicated page showcasing services with clear custom quote call-to-action
+**Goal**: Enhance Services section with CTA-focused project type cards
 **Depends on**: Phase 3
 **Research**: Not needed (internal UI work)
 **Plans**: 1
 
 Plans:
-- [ ] 04-01: Enhance Services section with CTA-focused cards (project types, "ideal for" descriptions, quote CTAs)
+- [x] 04-01: Enhance Services section with CTA-focused cards (project types, "ideal for" descriptions, quote CTAs)
 
 ### Phase 5: Additional Pages
 **Goal**: Supporting pages that build trust and explain process
@@ -100,6 +100,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Localization Foundation | 2/2 | Complete | 2026-01-09 |
 | 2. Content Localization | 3/3 | Complete | 2026-01-09 |
 | 3. Contact Form Functionality | 2/2 | Complete | 2026-01-09 |
-| 4. Services & Pricing Page | 0/1 | In progress | - |
+| 4. Services & Pricing Page | 1/1 | Complete | 2026-01-09 |
 | 5. Additional Pages | 0/3 | Not started | - |
 | 6. Polish & Optimization | 0/3 | Not started | - |

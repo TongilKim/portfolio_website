@@ -43,53 +43,61 @@
     "cta": "Get in touch"
   },
   "services": {
-    "title": "Services I Offer",
-    "description": "Comprehensive web development solutions to help your business succeed online",
+    "title": "What Can I Build For You?",
+    "description": "Every project is custom-built to match your specific needs. Here's what I specialize in:",
+    "idealForLabel": "Ideal for",
+    "cta": {
+      "card": "Get a Quote",
+      "section": "Ready to Start Your Project?",
+      "sectionDescription": "Tell me about your vision and I'll provide a custom quote within 24 hours.",
+      "button": "Request a Quote"
+    },
     "items": [
       {
-        "title": "Custom Website Development",
-        "description": "Fully responsive, custom-coded websites tailored to your unique needs and brand identity."
+        "title": "E-Commerce Store",
+        "description": "Complete online stores with secure payments, inventory management, and seamless checkout experiences.",
+        "idealFor": "Retailers, product sellers, subscription businesses"
       },
       {
-        "title": "UI/UX Design",
-        "description": "Beautiful, intuitive designs that engage users and create memorable experiences."
+        "title": "Portfolio Website",
+        "description": "Stunning showcases for your work with elegant galleries, smooth animations, and personal branding.",
+        "idealFor": "Creatives, freelancers, agencies, photographers"
       },
       {
-        "title": "E-Commerce Solutions",
-        "description": "Complete online store development with secure payment integration and inventory management."
+        "title": "Landing Page",
+        "description": "High-converting single pages designed to capture leads, launch products, or promote campaigns.",
+        "idealFor": "Startups, product launches, marketing campaigns"
       },
       {
-        "title": "Mobile-First Design",
-        "description": "Websites optimized for all devices, ensuring perfect performance on mobile, tablet, and desktop."
-      },
-      {
-        "title": "SEO Optimization",
-        "description": "Search engine optimized websites that help you rank higher and attract more customers."
-      },
-      {
-        "title": "Performance Optimization",
-        "description": "Lightning-fast loading times and optimal performance for better user experience and conversions."
+        "title": "Web Application",
+        "description": "Custom interactive applications with user authentication, dashboards, and dynamic functionality.",
+        "idealFor": "SaaS products, internal tools, custom platforms"
       }
     ]
   },
   "servicesV2": {
-    "title": "What I do",
+    "title": "What I build",
+    "cta": "Let's discuss your project",
     "items": [
       {
-        "title": "Web Development",
-        "description": "Custom websites built with modern technologies. Responsive and performant."
-      },
-      {
-        "title": "Design",
-        "description": "Clean, user-focused design that serves your business goals."
-      },
-      {
         "title": "E-Commerce",
-        "description": "Online stores with payment integration and product management."
+        "description": "Online stores with payments and inventory.",
+        "idealFor": "Retailers & product sellers"
       },
       {
-        "title": "Maintenance",
-        "description": "Ongoing support and updates to keep your site running smoothly."
+        "title": "Portfolios",
+        "description": "Showcase sites for creative work.",
+        "idealFor": "Creatives & freelancers"
+      },
+      {
+        "title": "Landing Pages",
+        "description": "High-converting marketing pages.",
+        "idealFor": "Startups & campaigns"
+      },
+      {
+        "title": "Web Apps",
+        "description": "Custom interactive applications.",
+        "idealFor": "SaaS & internal tools"
       }
     ]
   },
