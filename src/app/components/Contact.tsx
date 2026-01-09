@@ -1,12 +1,29 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card, CardContent } from "./ui/card";
+import { contactSchema, type ContactFormData } from "@/lib/validations/contactSchema";
 
 export function Contact() {
   const { t } = useTranslation();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    mode: "onBlur",
+  });
+
+  const onSubmit = (data: ContactFormData) => {
+    // TODO: Handle form submission in Plan 03-02
+    console.log("Form data:", data);
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -68,26 +85,57 @@ export function Contact() {
 
           <Card>
             <CardContent className="p-6">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     {t('contact.form.name')}
                   </label>
-                  <Input id="name" placeholder={t('contact.form.namePlaceholder')} />
+                  <Input
+                    id="name"
+                    placeholder={t('contact.form.namePlaceholder')}
+                    {...register("name")}
+                    aria-invalid={errors.name ? "true" : "false"}
+                  />
+                  {errors.name && (
+                    <p className="text-sm text-red-600 mt-1" role="alert">
+                      {t(errors.name.message as string)}
+                    </p>
+                  )}
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     {t('contact.form.email')}
                   </label>
-                  <Input id="email" type="email" placeholder={t('contact.form.emailPlaceholder')} />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder={t('contact.form.emailPlaceholder')}
+                    {...register("email")}
+                    aria-invalid={errors.email ? "true" : "false"}
+                  />
+                  {errors.email && (
+                    <p className="text-sm text-red-600 mt-1" role="alert">
+                      {t(errors.email.message as string)}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label htmlFor="project" className="block text-sm font-medium mb-2">
+                  <label htmlFor="projectType" className="block text-sm font-medium mb-2">
                     {t('contact.form.project')}
                   </label>
-                  <Input id="project" placeholder={t('contact.form.projectPlaceholder')} />
+                  <Input
+                    id="projectType"
+                    placeholder={t('contact.form.projectPlaceholder')}
+                    {...register("projectType")}
+                    aria-invalid={errors.projectType ? "true" : "false"}
+                  />
+                  {errors.projectType && (
+                    <p className="text-sm text-red-600 mt-1" role="alert">
+                      {t(errors.projectType.message as string)}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -98,7 +146,14 @@ export function Contact() {
                     id="message"
                     placeholder={t('contact.form.messagePlaceholder')}
                     rows={5}
+                    {...register("message")}
+                    aria-invalid={errors.message ? "true" : "false"}
                   />
+                  {errors.message && (
+                    <p className="text-sm text-red-600 mt-1" role="alert">
+                      {t(errors.message.message as string)}
+                    </p>
+                  )}
                 </div>
 
                 <Button type="submit" className="w-full gap-2">
