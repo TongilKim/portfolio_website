@@ -172,7 +172,10 @@
       "projectPlaceholder": "E-commerce website, Portfolio, etc.",
       "message": "Project Details",
       "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      "error": "Oops! Something went wrong. Please try again or email me directly."
     }
   },
   "contactV2": {
@@ -188,7 +191,10 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "submit": "Send message"
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      "error": "Oops! Something went wrong. Please try again or email me directly."
     }
   },
   "footer": {

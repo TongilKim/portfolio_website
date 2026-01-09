@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm as useFormspree } from "@formspree/react";
+import { Loader2, CheckCircle2, XCircle } from "lucide-react";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { contactSchemaV2, type ContactFormDataV2 } from "@/lib/validations/contactSchema";
+import { FORMSPREE_FORM_ID } from "@/config/formspree";
 
 export function ContactV2() {
   const { t } = useTranslation();
@@ -12,14 +15,19 @@ export function ContactV2() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<ContactFormDataV2>({
     resolver: zodResolver(contactSchemaV2),
     mode: "onBlur",
   });
 
-  const onSubmit = (data: ContactFormDataV2) => {
-    // TODO: Handle form submission in Plan 03-02
-    console.log("Form data:", data);
+  const [formspreeState, submitToFormspree] = useFormspree(FORMSPREE_FORM_ID);
+
+  const onSubmit = async (data: ContactFormDataV2) => {
+    await submitToFormspree(data);
+    if (formspreeState.succeeded) {
+      reset();
+    }
   };
 
   return (
@@ -100,10 +108,36 @@ export function ContactV2() {
 
               <button
                 type="submit"
-                className="border-2 border-black px-8 py-3 hover:bg-black hover:text-white transition-colors w-full md:w-auto"
+                disabled={formspreeState.submitting}
+                className="border-2 border-black px-8 py-3 hover:bg-black hover:text-white transition-colors w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                {t('contactV2.form.submit')}
+                {formspreeState.submitting ? (
+                  <>
+                    <Loader2 size={16} className="animate-spin" />
+                    {t('contactV2.form.sending')}
+                  </>
+                ) : (
+                  t('contactV2.form.submit')
+                )}
               </button>
+
+              {formspreeState.succeeded && (
+                <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-600 rounded">
+                  <CheckCircle2 className="text-green-600" size={20} />
+                  <p className="text-sm text-green-800">
+                    {t('contactV2.form.success')}
+                  </p>
+                </div>
+              )}
+
+              {formspreeState.errors && formspreeState.errors.length > 0 && (
+                <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-600 rounded">
+                  <XCircle className="text-red-600" size={20} />
+                  <p className="text-sm text-red-800">
+                    {t('contactV2.form.error')}
+                  </p>
+                </div>
+              )}
             </form>
           </div>
         </div>

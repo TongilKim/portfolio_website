@@ -1,12 +1,14 @@
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2, XCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm as useFormspree } from "@formspree/react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card, CardContent } from "./ui/card";
 import { contactSchema, type ContactFormData } from "@/lib/validations/contactSchema";
+import { FORMSPREE_FORM_ID } from "@/config/formspree";
 
 export function Contact() {
   const { t } = useTranslation();
@@ -15,14 +17,19 @@ export function Contact() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     mode: "onBlur",
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    // TODO: Handle form submission in Plan 03-02
-    console.log("Form data:", data);
+  const [formspreeState, submitToFormspree] = useFormspree(FORMSPREE_FORM_ID);
+
+  const onSubmit = async (data: ContactFormData) => {
+    await submitToFormspree(data);
+    if (formspreeState.succeeded) {
+      reset();
+    }
   };
 
   return (
@@ -156,10 +163,37 @@ export function Contact() {
                   )}
                 </div>
 
-                <Button type="submit" className="w-full gap-2">
-                  {t('contact.form.submit')}
-                  <Send size={16} />
+                <Button type="submit" className="w-full gap-2" disabled={formspreeState.submitting}>
+                  {formspreeState.submitting ? (
+                    <>
+                      <Loader2 size={16} className="animate-spin" />
+                      {t('contact.form.sending')}
+                    </>
+                  ) : (
+                    <>
+                      {t('contact.form.submit')}
+                      <Send size={16} />
+                    </>
+                  )}
                 </Button>
+
+                {formspreeState.succeeded && (
+                  <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <CheckCircle2 className="text-green-600" size={20} />
+                    <p className="text-sm text-green-800">
+                      {t('contact.form.success')}
+                    </p>
+                  </div>
+                )}
+
+                {formspreeState.errors && formspreeState.errors.length > 0 && (
+                  <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <XCircle className="text-red-600" size={20} />
+                    <p className="text-sm text-red-800">
+                      {t('contact.form.error')}
+                    </p>
+                  </div>
+                )}
               </form>
             </CardContent>
           </Card>
