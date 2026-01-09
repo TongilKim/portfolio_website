@@ -1,18 +1,26 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
+    if (isHomePage) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsMenuOpen(false);
+      }
+    } else {
+      // Navigate to home with hash
+      window.location.href = `/#${id}`;
     }
   };
 
@@ -36,6 +44,9 @@ export function Header() {
             <button onClick={() => scrollToSection("about")} className="hover:text-blue-600 transition-colors">
               {t('nav.about')}
             </button>
+            <Link to="/faq" className="hover:text-blue-600 transition-colors">
+              {t('nav.faq')}
+            </Link>
             <button onClick={() => scrollToSection("contact")} className="hover:text-blue-600 transition-colors">
               {t('nav.contact')}
             </button>
@@ -72,6 +83,9 @@ export function Header() {
             <button onClick={() => scrollToSection("about")} className="text-left hover:text-blue-600 transition-colors">
               {t('nav.about')}
             </button>
+            <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
+              {t('nav.faq')}
+            </Link>
             <button onClick={() => scrollToSection("contact")} className="text-left hover:text-blue-600 transition-colors">
               {t('nav.contact')}
             </button>

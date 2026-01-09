@@ -15,6 +15,7 @@
     "work": "Work",
     "about": "About",
     "contact": "Contact",
+    "faq": "FAQ",
     "getStarted": "Get Started",
     "menu": "Menu",
     "close": "Close"
@@ -239,6 +240,67 @@
     "message": {
       "min": "Message must be at least 10 characters",
       "max": "Message must be less than 1000 characters"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about working with me",
+    "sections": [
+      {
+        "title": "Business & Pricing",
+        "items": [
+          {
+            "question": "How much does a website cost?",
+            "answer": "Every project is unique, so I provide custom quotes based on your specific needs. A simple landing page starts around $1,500, while a full e-commerce site with custom features can range from $5,000-$15,000+. Contact me for a free quote tailored to your project."
+          },
+          {
+            "question": "How long does a project take?",
+            "answer": "Timeline depends on complexity. A landing page typically takes 1-2 weeks, a portfolio site 2-3 weeks, and a full e-commerce site 4-8 weeks. I'll provide a specific timeline during our initial consultation."
+          },
+          {
+            "question": "What's your payment structure?",
+            "answer": "I typically require 50% upfront to begin work, with the remaining 50% due upon project completion. For larger projects, we can arrange milestone-based payments."
+          },
+          {
+            "question": "Do you offer revisions?",
+            "answer": "Yes! Each project includes 2-3 rounds of revisions depending on scope. I want you to be 100% satisfied with the final result. Additional revisions beyond the included rounds are billed hourly."
+          },
+          {
+            "question": "What if I need changes after launch?",
+            "answer": "I offer ongoing maintenance packages for clients who need regular updates. For one-off changes, I'm happy to provide hourly support. Most clients don't need much after launch since I build sites to be easy to update."
+          }
+        ]
+      },
+      {
+        "title": "Technical Questions",
+        "items": [
+          {
+            "question": "What technologies do you use?",
+            "answer": "I specialize in modern web technologies: React, Next.js, TypeScript, and Tailwind CSS for the frontend. For e-commerce, I work with Shopify, WooCommerce, or custom solutions depending on your needs."
+          },
+          {
+            "question": "Will my website be mobile-friendly?",
+            "answer": "Absolutely! Every site I build is fully responsive and tested across all devices. Mobile-first design is standard in all my projects."
+          },
+          {
+            "question": "Do you handle hosting?",
+            "answer": "I can recommend and set up hosting for you. Most of my sites are deployed on Vercel or Netlify for optimal performance. I'll guide you through the process and can include hosting setup in the project."
+          },
+          {
+            "question": "Can you add custom features like booking or payments?",
+            "answer": "Yes! I regularly integrate booking systems, payment processing (Stripe, PayPal), user authentication, and other custom functionality. Let me know what you need during our consultation."
+          },
+          {
+            "question": "Will I be able to update the site myself?",
+            "answer": "Depending on your needs, I can build with a content management system (CMS) that lets you easily update text, images, and content. I'll also provide training on how to make updates."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Still have questions?",
+      "description": "I'm happy to answer any other questions you might have. Let's chat!",
+      "button": "Get in Touch"
     }
   }
 }
