@@ -32,25 +32,25 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
-            <button onClick={() => scrollToSection("home")} className="hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("home")} className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.home')}
             </button>
-            <button onClick={() => scrollToSection("services")} className="hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("services")} className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.services')}
             </button>
-            <button onClick={() => scrollToSection("portfolio")} className="hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("portfolio")} className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.portfolio')}
             </button>
-            <Link to="/about" className="hover:text-blue-600 transition-colors">
+            <Link to="/about" className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.about')}
             </Link>
-            <Link to="/faq" className="hover:text-blue-600 transition-colors">
+            <Link to="/faq" className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.faq')}
             </Link>
-            <Link to="/process" className="hover:text-blue-600 transition-colors">
+            <Link to="/process" className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.process')}
             </Link>
-            <button onClick={() => scrollToSection("contact")} className="hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("contact")} className="cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.contact')}
             </button>
           </nav>
@@ -64,7 +64,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,25 +74,25 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 flex flex-col gap-4">
-            <button onClick={() => scrollToSection("home")} className="text-left hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("home")} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.home')}
             </button>
-            <button onClick={() => scrollToSection("services")} className="text-left hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("services")} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.services')}
             </button>
-            <button onClick={() => scrollToSection("portfolio")} className="text-left hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("portfolio")} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.portfolio')}
             </button>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.about')}
             </Link>
-            <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
+            <Link to="/faq" onClick={() => setIsMenuOpen(false)} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.faq')}
             </Link>
-            <Link to="/process" onClick={() => setIsMenuOpen(false)} className="text-left hover:text-blue-600 transition-colors">
+            <Link to="/process" onClick={() => setIsMenuOpen(false)} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.process')}
             </Link>
-            <button onClick={() => scrollToSection("contact")} className="text-left hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection("contact")} className="text-left cursor-pointer hover:text-blue-600 transition-colors">
               {t('nav.contact')}
             </button>
             <div className="pt-2 border-t">

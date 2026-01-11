@@ -18,7 +18,7 @@ function AccordionItem({ question, answer }: FAQItem) {
   return (
     <div className="border-b border-gray-200">
       <button
-        className="w-full py-4 flex justify-between items-center text-left hover:text-blue-600 transition-colors"
+        className="w-full py-4 flex justify-between items-center text-left cursor-pointer hover:text-blue-600 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-medium pr-4">{question}</span>
@@ -78,7 +78,7 @@ export function FAQ() {
           <p className="text-blue-100 mb-6">{t("faq.cta.description")}</p>
           <a
             href="/#contact"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium cursor-pointer hover:bg-blue-50 transition-colors"
           >
             {t("faq.cta.button")}
           </a>

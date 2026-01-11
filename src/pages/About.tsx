@@ -78,7 +78,7 @@ export function AboutPage() {
           <p className="text-blue-100 mb-6">{t("aboutPage.cta.description")}</p>
           <a
             href="/#contact"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium cursor-pointer hover:bg-blue-50 transition-colors"
           >
             {t("aboutPage.cta.button")}
           </a>

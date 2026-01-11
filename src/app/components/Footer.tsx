@@ -15,13 +15,13 @@ export function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
                 <Github size={20} />
               </a>
             </div>
@@ -30,10 +30,10 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#home" className="hover:text-white transition-colors">{t('nav.home')}</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">{t('nav.services')}</a></li>
-              <li><a href="#portfolio" className="hover:text-white transition-colors">{t('nav.portfolio')}</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">{t('nav.about')}</a></li>
+              <li><a href="#home" className="cursor-pointer hover:text-white transition-colors">{t('nav.home')}</a></li>
+              <li><a href="#services" className="cursor-pointer hover:text-white transition-colors">{t('nav.services')}</a></li>
+              <li><a href="#portfolio" className="cursor-pointer hover:text-white transition-colors">{t('nav.portfolio')}</a></li>
+              <li><a href="#about" className="cursor-pointer hover:text-white transition-colors">{t('nav.about')}</a></li>
             </ul>
           </div>
 
@@ -42,7 +42,7 @@ export function Footer() {
             <ul className="space-y-2 text-gray-400">
               {servicesList.map((service, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:text-white transition-colors">{service}</a>
+                  <a href="#" className="cursor-pointer hover:text-white transition-colors">{service}</a>
                 </li>
               ))}
             </ul>
