@@ -33,23 +33,23 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = iconMap[index] || Code;
             return (
-              <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group">
+              <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group h-full flex flex-col">
                 <CardHeader>
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
                     <Icon className="text-blue-600 group-hover:text-white transition-colors" size={24} />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-base">
+                <CardContent className="flex-1 flex flex-col">
+                  <CardDescription className="text-base flex-1">
                     {service.description}
                   </CardDescription>
-                  <p className="text-sm text-blue-600 font-medium">
+                  <p className="text-sm text-blue-600 font-medium mt-4">
                     {t('services.idealForLabel')}: {service.idealFor}
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
+                    className="w-full mt-4 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
                     onClick={scrollToContact}
                   >
                     {t('services.cta.card')}
