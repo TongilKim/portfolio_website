@@ -13,7 +13,8 @@ i18n
       en: { translation: enTranslation },
       ko: { translation: koTranslation }
     },
-    fallbackLng: 'en',
+    lng: 'ko',
+    fallbackLng: 'ko',
     debug: import.meta.env.DEV,
     interpolation: {
       escapeValue: false // React already escapes

@@ -13,12 +13,23 @@ test.describe('Language Switching', () => {
     await expect(langSwitcher.first()).toBeVisible();
   });
 
-  test('switch to Korean language', async ({ page }) => {
+  test('default language is Korean', async ({ page }) => {
     await page.goto('/');
 
-    // Get hero section text before switch
+    // Get hero section text - should be Korean by default
     const heroSection = page.locator('#home');
-    const englishText = await heroSection.textContent();
+    const heroText = await heroSection.textContent();
+
+    // Check for Korean characters (Hangul)
+    expect(heroText).toMatch(/[\uAC00-\uD7AF]/);
+  });
+
+  test('switch to English language', async ({ page }) => {
+    await page.goto('/');
+
+    // Get hero section text before switch (should be Korean)
+    const heroSection = page.locator('#home');
+    const koreanText = await heroSection.textContent();
 
     // Find and click language switcher (button with Globe icon)
     const langSwitcher = page.locator('header').getByRole('button').filter({ has: page.locator('svg.lucide-globe') }).first();
@@ -27,30 +38,35 @@ test.describe('Language Switching', () => {
     // Wait for translation to apply
     await page.waitForTimeout(500);
 
-    // Verify text has changed (contains Korean characters)
-    const koreanText = await heroSection.textContent();
-    expect(koreanText).not.toBe(englishText);
+    // Verify text has changed
+    const englishText = await heroSection.textContent();
+    expect(englishText).not.toBe(koreanText);
 
-    // Check for Korean characters (Hangul)
-    expect(koreanText).toMatch(/[\uAC00-\uD7AF]/);
+    // Verify English content is shown
+    await expect(page.getByText('Get Started', { exact: false })).toBeVisible();
   });
 
-  test('switch back to English', async ({ page }) => {
+  test('switch back to Korean', async ({ page }) => {
     await page.goto('/');
 
     // Find language switcher
     const langSwitcher = page.locator('header').getByRole('button').filter({ has: page.locator('svg.lucide-globe') }).first();
 
-    // Switch to Korean first
+    // Switch to English first (default is Korean)
     await langSwitcher.click();
     await page.waitForTimeout(500);
 
-    // Now switch back to English
-    await langSwitcher.click();
-    await page.waitForTimeout(500);
-
-    // Verify English content is shown
+    // Verify English
     await expect(page.getByText('Get Started', { exact: false })).toBeVisible();
+
+    // Now switch back to Korean
+    await langSwitcher.click();
+    await page.waitForTimeout(500);
+
+    // Verify Korean content is shown (check hero section for Korean text)
+    const heroSection = page.locator('#home');
+    const heroText = await heroSection.textContent();
+    expect(heroText).toMatch(/[\uAC00-\uD7AF]/); // Contains Korean characters
   });
 
   test('language persists on page navigation', async ({ page }) => {
@@ -59,7 +75,7 @@ test.describe('Language Switching', () => {
     // Find language switcher
     const langSwitcher = page.locator('header').getByRole('button').filter({ has: page.locator('svg.lucide-globe') }).first();
 
-    // Switch to Korean
+    // Switch to English (default is Korean)
     await langSwitcher.click();
     await page.waitForTimeout(500);
 
@@ -67,22 +83,14 @@ test.describe('Language Switching', () => {
     await page.locator('header nav a[href="/faq"]').first().click();
     await page.waitForTimeout(500);
 
-    // Verify Korean is still active (check for Korean text on FAQ page)
-    const pageContent = await page.locator('body').textContent();
-    expect(pageContent).toMatch(/[\uAC00-\uD7AF]/); // Contains Korean characters
+    // Verify English is still active (check for English heading)
+    await expect(page.getByRole('heading', { name: /Frequently Asked Questions/i })).toBeVisible();
   });
 
-  test('FAQ page shows Korean questions when switched', async ({ page }) => {
+  test('FAQ page shows content in default Korean', async ({ page }) => {
     await page.goto('/faq');
 
-    // Find language switcher
-    const langSwitcher = page.locator('header').getByRole('button').filter({ has: page.locator('svg.lucide-globe') }).first();
-
-    // Switch to Korean
-    await langSwitcher.click();
-    await page.waitForTimeout(500);
-
-    // Verify Korean FAQ heading
+    // Verify Korean FAQ heading (default language is Korean)
     await expect(page.getByRole('heading', { name: /자주 묻는 질문/i })).toBeVisible();
   });
 });

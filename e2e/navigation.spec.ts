@@ -41,10 +41,10 @@ test.describe('Navigation & Routing', () => {
     // Verify URL changed
     await expect(page).toHaveURL('/process');
 
-    // Verify Process page content (actual title is "How I Work")
+    // Verify Process page content (default is Korean "작업 프로세스", English is "How I Work")
     await expect(page.locator('h1')).toBeVisible();
     const h1Text = await page.locator('h1').textContent();
-    expect(h1Text).toMatch(/How I Work|작업 과정/i);
+    expect(h1Text).toMatch(/How I Work|작업 프로세스/i);
   });
 
   test('navigate to About page', async ({ page }) => {

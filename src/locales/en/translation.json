@@ -230,16 +230,19 @@
   },
   "validation": {
     "name": {
+      "required": "Please enter your name",
       "min": "Name must be at least 2 characters",
       "max": "Name must be less than 50 characters"
     },
     "email": {
+      "required": "Please enter your email address",
       "invalid": "Please enter a valid email address"
     },
     "projectType": {
       "required": "Please describe your project type"
     },
     "message": {
+      "required": "Please enter a message",
       "min": "Message must be at least 10 characters",
       "max": "Message must be less than 1000 characters"
     }
