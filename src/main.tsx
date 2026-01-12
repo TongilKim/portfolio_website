@@ -1,11 +1,11 @@
-import { Suspense } from 'react';
-import { createRoot } from 'react-dom/client';
-import './i18n';
-import App from './app/App.tsx';
-import './styles/index.css';
+import { Suspense } from "react";
+import { createRoot } from "react-dom/client";
+import "./i18n";
+import App from "./app/App.tsx";
+import "./styles/index.css";
 
-createRoot(document.getElementById('root')!).render(
-  <Suspense fallback="Loading...">
-    <App />
-  </Suspense>
+createRoot(document.getElementById("root")!).render(
+	<Suspense fallback="Loading...">
+		<App />
+	</Suspense>,
 );

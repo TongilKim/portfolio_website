@@ -1,328 +1,323 @@
 {
-  "app": {
-    "title": "WebCraft",
-    "description": "Professional Web Development Services"
-  },
-  "language": {
-    "en": "English",
-    "ko": "한국어",
-    "switch": "Language"
-  },
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "work": "Work",
-    "about": "About",
-    "contact": "Contact",
-    "faq": "FAQ",
-    "process": "Process",
-    "getStarted": "Get Started",
-    "menu": "Menu",
-    "close": "Close"
-  },
-  "hero": {
-    "badge": "Professional Web Development",
-    "title": "Transform Your Vision Into",
-    "titleHighlight": "Reality",
-    "description": "I create stunning, responsive websites that help your business grow. From concept to launch, I'll bring your digital dreams to life.",
-    "cta": {
-      "start": "Start Your Project",
-      "portfolio": "View Portfolio"
-    },
-    "stats": {
-      "projects": "50+",
-      "projectsLabel": "Projects Completed",
-      "satisfaction": "100%",
-      "satisfactionLabel": "Client Satisfaction",
-      "experience": "5+",
-      "experienceLabel": "Years Experience"
-    }
-  },
-  "services": {
-    "title": "What Can I Build For You?",
-    "description": "Every project is custom-built to match your specific needs. Here's what I specialize in:",
-    "idealForLabel": "Ideal for",
-    "cta": {
-      "card": "Get a Quote",
-      "section": "Ready to Start Your Project?",
-      "sectionDescription": "Tell me about your vision and I'll provide a custom quote within 24 hours.",
-      "button": "Request a Quote"
-    },
-    "items": [
-      {
-        "title": "E-Commerce Store",
-        "description": "Complete online stores with secure payments, inventory management, and seamless checkout experiences.",
-        "idealFor": "Retailers, product sellers, subscription businesses"
-      },
-      {
-        "title": "Portfolio Website",
-        "description": "Stunning showcases for your work with elegant galleries, smooth animations, and personal branding.",
-        "idealFor": "Creatives, freelancers, agencies, photographers"
-      },
-      {
-        "title": "Landing Page",
-        "description": "High-converting single pages designed to capture leads, launch products, or promote campaigns.",
-        "idealFor": "Startups, product launches, marketing campaigns"
-      },
-      {
-        "title": "Web Application",
-        "description": "Custom interactive applications with user authentication, dashboards, and dynamic functionality.",
-        "idealFor": "SaaS products, internal tools, custom platforms"
-      }
-    ]
-  },
-  "portfolio": {
-    "title": "Featured Projects",
-    "description": "A showcase of recent work demonstrating my expertise in web development",
-    "projects": [
-      {
-        "title": "Modern Portfolio Website",
-        "description": "A sleek portfolio site for a creative professional with smooth animations and responsive design."
-      },
-      {
-        "title": "E-Commerce Store",
-        "description": "Full-featured online store with product management, cart functionality, and secure checkout."
-      },
-      {
-        "title": "Mobile App Landing Page",
-        "description": "Eye-catching landing page for a mobile app with download tracking and analytics."
-      }
-    ]
-  },
-  "about": {
-    "title": "About Me",
-    "learnMore": "Learn more about me",
-    "paragraphs": [
-      "I'm a passionate freelance web developer with over 5 years of experience creating beautiful, functional websites for clients worldwide.",
-      "My approach combines technical expertise with creative design thinking to deliver websites that not only look great but also drive real business results.",
-      "Whether you're a startup looking for your first website or an established business wanting to upgrade your online presence, I'm here to help you succeed."
-    ],
-    "skillsTitle": "Skills & Technologies",
-    "skills": [
-      "React & Next.js",
-      "TypeScript & JavaScript",
-      "Tailwind CSS & Styled Components",
-      "Responsive Design",
-      "SEO & Performance",
-      "E-Commerce Solutions",
-      "RESTful APIs",
-      "Git & Version Control"
-    ],
-    "quote": "Success is not about the tools you use, but how you use them to solve real problems for real people."
-  },
-  "contact": {
-    "title": "Let's Work Together",
-    "description": "Ready to start your project? Get in touch and let's create something amazing",
-    "getInTouch": {
-      "title": "Get In Touch",
-      "description": "Fill out the form and I'll get back to you within 24 hours. Or reach out directly using the contact information below."
-    },
-    "info": {
-      "emailLabel": "Email",
-      "email": "hello@webcraft.com",
-      "phoneLabel": "Phone",
-      "phone": "+1 (555) 123-4567",
-      "locationLabel": "Location",
-      "location": "Available Worldwide"
-    },
-    "form": {
-      "name": "Your Name",
-      "namePlaceholder": "John Doe",
-      "email": "Email Address",
-      "emailPlaceholder": "john@example.com",
-      "project": "Project Type",
-      "projectPlaceholder": "E-commerce website, Portfolio, etc.",
-      "message": "Project Details",
-      "messagePlaceholder": "Tell me about your project...",
-      "submit": "Send Message",
-      "sending": "Sending...",
-      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
-      "error": "Oops! Something went wrong. Please try again or email me directly."
-    }
-  },
-  "footer": {
-    "description": "Creating beautiful, functional websites that help businesses grow. Let's turn your vision into reality.",
-    "quickLinks": "Quick Links",
-    "servicesTitle": "Services",
-    "servicesList": [
-      "Web Development",
-      "UI/UX Design",
-      "E-Commerce",
-      "SEO"
-    ],
-    "copyright": "WebCraft. All rights reserved."
-  },
-  "validation": {
-    "name": {
-      "required": "Please enter your name",
-      "min": "Name must be at least 2 characters",
-      "max": "Name must be less than 50 characters"
-    },
-    "email": {
-      "required": "Please enter your email address",
-      "invalid": "Please enter a valid email address"
-    },
-    "projectType": {
-      "required": "Please describe your project type"
-    },
-    "message": {
-      "required": "Please enter a message",
-      "min": "Message must be at least 10 characters",
-      "max": "Message must be less than 1000 characters"
-    }
-  },
-  "aboutPage": {
-    "title": "About Me",
-    "subtitle": "A passionate developer helping businesses succeed online",
-    "story": {
-      "title": "My Story",
-      "paragraphs": [
-        "I've been building websites for over 5 years, working with clients ranging from solo entrepreneurs to growing businesses. My journey started with a simple curiosity about how websites work, and grew into a passion for creating digital experiences that make a real difference.",
-        "What drives me isn't just writing code—it's seeing the impact a well-crafted website has on someone's business. There's nothing quite like launching a project and watching it help a client reach new customers, streamline their work, or finally have that professional online presence they've been dreaming of.",
-        "I believe in doing things right, even when no one's watching. That means clean code, thoughtful design decisions, and always putting the user experience first. Every project is an opportunity to create something meaningful."
-      ]
-    },
-    "valuesTitle": "How I Work",
-    "values": [
-      {
-        "title": "Quality Over Speed",
-        "description": "I'd rather take a bit more time to do something right than rush and create problems later. Your website should be built to last."
-      },
-      {
-        "title": "Clear Communication",
-        "description": "No jargon, no surprises. I explain things in plain language and keep you updated throughout the process."
-      },
-      {
-        "title": "Partner Mindset",
-        "description": "I'm not just a contractor—I'm invested in your success. Your goals become my goals."
-      },
-      {
-        "title": "Continuous Learning",
-        "description": "Web technology evolves fast. I stay current so you get modern, future-proof solutions."
-      }
-    ],
-    "skillsTitle": "Skills & Technologies",
-    "skills": [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "Node.js",
-      "Responsive Design",
-      "SEO Optimization",
-      "E-commerce",
-      "API Integration"
-    ],
-    "quote": "The best websites aren't just pretty—they solve real problems for real people.",
-    "cta": {
-      "title": "Let's Build Something Together",
-      "description": "Whether you have a clear vision or just a rough idea, I'd love to hear about your project.",
-      "button": "Start a Conversation"
-    }
-  },
-  "process": {
-    "title": "How I Work",
-    "description": "From first conversation to launch, here's what to expect when we work together",
-    "step": "Step",
-    "clientLabel": "What you'll experience:",
-    "phases": [
-      {
-        "title": "Discovery",
-        "description": "We start with a conversation about your goals, audience, and vision. I'll ask questions to understand what success looks like for your project and identify any technical requirements.",
-        "clientExperience": "A casual 30-minute call where you share your ideas and I listen. No pressure, just getting to know your project."
-      },
-      {
-        "title": "Design",
-        "description": "Based on our discovery call, I create mockups and wireframes showing the look and feel of your site. We iterate until you're excited about the direction.",
-        "clientExperience": "You'll receive visual mockups to review. Share feedback, and I'll refine until it feels right."
-      },
-      {
-        "title": "Development",
-        "description": "I build your site using modern, performant technologies. You'll get regular progress updates and a preview link to see the site come together.",
-        "clientExperience": "Watch your site take shape with weekly updates. Test it yourself and let me know what to adjust."
-      },
-      {
-        "title": "Launch",
-        "description": "Final testing, optimization, and deployment. I handle all the technical details and make sure everything works perfectly before going live.",
-        "clientExperience": "A smooth handoff with training on how to update your site. Ongoing support available if needed."
-      }
-    ],
-    "timeline": {
-      "title": "Typical Timelines",
-      "items": [
-        { "type": "Landing Page", "duration": "1-2 weeks" },
-        { "type": "Portfolio", "duration": "2-3 weeks" },
-        { "type": "E-commerce", "duration": "4-6 weeks" },
-        { "type": "Web App", "duration": "6-8 weeks" }
-      ]
-    },
-    "cta": {
-      "title": "Ready to get started?",
-      "description": "Let's discuss your project and see how I can help.",
-      "button": "Start a Conversation"
-    }
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "description": "Everything you need to know about working with me",
-    "sections": [
-      {
-        "title": "Business & Pricing",
-        "items": [
-          {
-            "question": "How much does a website cost?",
-            "answer": "Every project is unique, so I provide custom quotes based on your specific needs. A simple landing page starts around $1,500, while a full e-commerce site with custom features can range from $5,000-$15,000+. Contact me for a free quote tailored to your project."
-          },
-          {
-            "question": "How long does a project take?",
-            "answer": "Timeline depends on complexity. A landing page typically takes 1-2 weeks, a portfolio site 2-3 weeks, and a full e-commerce site 4-8 weeks. I'll provide a specific timeline during our initial consultation."
-          },
-          {
-            "question": "What's your payment structure?",
-            "answer": "I typically require 50% upfront to begin work, with the remaining 50% due upon project completion. For larger projects, we can arrange milestone-based payments."
-          },
-          {
-            "question": "Do you offer revisions?",
-            "answer": "Yes! Each project includes 2-3 rounds of revisions depending on scope. I want you to be 100% satisfied with the final result. Additional revisions beyond the included rounds are billed hourly."
-          },
-          {
-            "question": "What if I need changes after launch?",
-            "answer": "I offer ongoing maintenance packages for clients who need regular updates. For one-off changes, I'm happy to provide hourly support. Most clients don't need much after launch since I build sites to be easy to update."
-          }
-        ]
-      },
-      {
-        "title": "Technical Questions",
-        "items": [
-          {
-            "question": "What technologies do you use?",
-            "answer": "I specialize in modern web technologies: React, Next.js, TypeScript, and Tailwind CSS for the frontend. For e-commerce, I work with Shopify, WooCommerce, or custom solutions depending on your needs."
-          },
-          {
-            "question": "Will my website be mobile-friendly?",
-            "answer": "Absolutely! Every site I build is fully responsive and tested across all devices. Mobile-first design is standard in all my projects."
-          },
-          {
-            "question": "Do you handle hosting?",
-            "answer": "I can recommend and set up hosting for you. Most of my sites are deployed on Vercel or Netlify for optimal performance. I'll guide you through the process and can include hosting setup in the project."
-          },
-          {
-            "question": "Can you add custom features like booking or payments?",
-            "answer": "Yes! I regularly integrate booking systems, payment processing (Stripe, PayPal), user authentication, and other custom functionality. Let me know what you need during our consultation."
-          },
-          {
-            "question": "Will I be able to update the site myself?",
-            "answer": "Depending on your needs, I can build with a content management system (CMS) that lets you easily update text, images, and content. I'll also provide training on how to make updates."
-          }
-        ]
-      }
-    ],
-    "cta": {
-      "title": "Still have questions?",
-      "description": "I'm happy to answer any other questions you might have. Let's chat!",
-      "button": "Get in Touch"
-    }
-  }
+	"app": {
+		"title": "WebCraft",
+		"description": "Professional Web Development Services"
+	},
+	"language": {
+		"en": "English",
+		"ko": "한국어",
+		"switch": "Language"
+	},
+	"nav": {
+		"home": "Home",
+		"services": "Services",
+		"portfolio": "Portfolio",
+		"work": "Work",
+		"about": "About",
+		"contact": "Contact",
+		"faq": "FAQ",
+		"process": "Process",
+		"getStarted": "Get Started",
+		"menu": "Menu",
+		"close": "Close"
+	},
+	"hero": {
+		"badge": "Professional Web Development",
+		"title": "Transform Your Vision Into",
+		"titleHighlight": "Reality",
+		"description": "I create stunning, responsive websites that help your business grow. From concept to launch, I'll bring your digital dreams to life.",
+		"cta": {
+			"start": "Start Your Project",
+			"portfolio": "View Portfolio"
+		},
+		"stats": {
+			"projects": "50+",
+			"projectsLabel": "Projects Completed",
+			"satisfaction": "100%",
+			"satisfactionLabel": "Client Satisfaction",
+			"experience": "5+",
+			"experienceLabel": "Years Experience"
+		}
+	},
+	"services": {
+		"title": "What Can I Build For You?",
+		"description": "Every project is custom-built to match your specific needs. Here's what I specialize in:",
+		"idealForLabel": "Ideal for",
+		"cta": {
+			"card": "Get a Quote",
+			"section": "Ready to Start Your Project?",
+			"sectionDescription": "Tell me about your vision and I'll provide a custom quote within 24 hours.",
+			"button": "Request a Quote"
+		},
+		"items": [
+			{
+				"title": "E-Commerce Store",
+				"description": "Complete online stores with secure payments, inventory management, and seamless checkout experiences.",
+				"idealFor": "Retailers, product sellers, subscription businesses"
+			},
+			{
+				"title": "Portfolio Website",
+				"description": "Stunning showcases for your work with elegant galleries, smooth animations, and personal branding.",
+				"idealFor": "Creatives, freelancers, agencies, photographers"
+			},
+			{
+				"title": "Landing Page",
+				"description": "High-converting single pages designed to capture leads, launch products, or promote campaigns.",
+				"idealFor": "Startups, product launches, marketing campaigns"
+			},
+			{
+				"title": "Web Application",
+				"description": "Custom interactive applications with user authentication, dashboards, and dynamic functionality.",
+				"idealFor": "SaaS products, internal tools, custom platforms"
+			}
+		]
+	},
+	"portfolio": {
+		"title": "Featured Projects",
+		"description": "A showcase of recent work demonstrating my expertise in web development",
+		"projects": [
+			{
+				"title": "Modern Portfolio Website",
+				"description": "A sleek portfolio site for a creative professional with smooth animations and responsive design."
+			},
+			{
+				"title": "E-Commerce Store",
+				"description": "Full-featured online store with product management, cart functionality, and secure checkout."
+			},
+			{
+				"title": "Mobile App Landing Page",
+				"description": "Eye-catching landing page for a mobile app with download tracking and analytics."
+			}
+		]
+	},
+	"about": {
+		"title": "About Me",
+		"learnMore": "Learn more about me",
+		"paragraphs": [
+			"I'm a passionate freelance web developer with over 5 years of experience creating beautiful, functional websites for clients worldwide.",
+			"My approach combines technical expertise with creative design thinking to deliver websites that not only look great but also drive real business results.",
+			"Whether you're a startup looking for your first website or an established business wanting to upgrade your online presence, I'm here to help you succeed."
+		],
+		"skillsTitle": "Skills & Technologies",
+		"skills": [
+			"React & Next.js",
+			"TypeScript & JavaScript",
+			"Tailwind CSS & Styled Components",
+			"Responsive Design",
+			"SEO & Performance",
+			"E-Commerce Solutions",
+			"RESTful APIs",
+			"Git & Version Control"
+		],
+		"quote": "Success is not about the tools you use, but how you use them to solve real problems for real people."
+	},
+	"contact": {
+		"title": "Let's Work Together",
+		"description": "Ready to start your project? Get in touch and let's create something amazing",
+		"getInTouch": {
+			"title": "Get In Touch",
+			"description": "Fill out the form and I'll get back to you within 24 hours. Or reach out directly using the contact information below."
+		},
+		"info": {
+			"emailLabel": "Email",
+			"email": "hello@webcraft.com",
+			"phoneLabel": "Phone",
+			"phone": "+1 (555) 123-4567",
+			"locationLabel": "Location",
+			"location": "Available Worldwide"
+		},
+		"form": {
+			"name": "Your Name",
+			"namePlaceholder": "John Doe",
+			"email": "Email Address",
+			"emailPlaceholder": "john@example.com",
+			"project": "Project Type",
+			"projectPlaceholder": "E-commerce website, Portfolio, etc.",
+			"message": "Project Details",
+			"messagePlaceholder": "Tell me about your project...",
+			"submit": "Send Message",
+			"sending": "Sending...",
+			"success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+			"error": "Oops! Something went wrong. Please try again or email me directly."
+		}
+	},
+	"footer": {
+		"description": "Creating beautiful, functional websites that help businesses grow. Let's turn your vision into reality.",
+		"quickLinks": "Quick Links",
+		"servicesTitle": "Services",
+		"servicesList": ["Web Development", "UI/UX Design", "E-Commerce", "SEO"],
+		"copyright": "WebCraft. All rights reserved."
+	},
+	"validation": {
+		"name": {
+			"required": "Please enter your name",
+			"min": "Name must be at least 2 characters",
+			"max": "Name must be less than 50 characters"
+		},
+		"email": {
+			"required": "Please enter your email address",
+			"invalid": "Please enter a valid email address"
+		},
+		"projectType": {
+			"required": "Please describe your project type"
+		},
+		"message": {
+			"required": "Please enter a message",
+			"min": "Message must be at least 10 characters",
+			"max": "Message must be less than 1000 characters"
+		}
+	},
+	"aboutPage": {
+		"title": "About Me",
+		"subtitle": "A passionate developer helping businesses succeed online",
+		"story": {
+			"title": "My Story",
+			"paragraphs": [
+				"I've been building websites for over 5 years, working with clients ranging from solo entrepreneurs to growing businesses. My journey started with a simple curiosity about how websites work, and grew into a passion for creating digital experiences that make a real difference.",
+				"What drives me isn't just writing code—it's seeing the impact a well-crafted website has on someone's business. There's nothing quite like launching a project and watching it help a client reach new customers, streamline their work, or finally have that professional online presence they've been dreaming of.",
+				"I believe in doing things right, even when no one's watching. That means clean code, thoughtful design decisions, and always putting the user experience first. Every project is an opportunity to create something meaningful."
+			]
+		},
+		"valuesTitle": "How I Work",
+		"values": [
+			{
+				"title": "Quality Over Speed",
+				"description": "I'd rather take a bit more time to do something right than rush and create problems later. Your website should be built to last."
+			},
+			{
+				"title": "Clear Communication",
+				"description": "No jargon, no surprises. I explain things in plain language and keep you updated throughout the process."
+			},
+			{
+				"title": "Partner Mindset",
+				"description": "I'm not just a contractor—I'm invested in your success. Your goals become my goals."
+			},
+			{
+				"title": "Continuous Learning",
+				"description": "Web technology evolves fast. I stay current so you get modern, future-proof solutions."
+			}
+		],
+		"skillsTitle": "Skills & Technologies",
+		"skills": [
+			"React",
+			"Next.js",
+			"TypeScript",
+			"JavaScript",
+			"Tailwind CSS",
+			"Node.js",
+			"Responsive Design",
+			"SEO Optimization",
+			"E-commerce",
+			"API Integration"
+		],
+		"quote": "The best websites aren't just pretty—they solve real problems for real people.",
+		"cta": {
+			"title": "Let's Build Something Together",
+			"description": "Whether you have a clear vision or just a rough idea, I'd love to hear about your project.",
+			"button": "Start a Conversation"
+		}
+	},
+	"process": {
+		"title": "How I Work",
+		"description": "From first conversation to launch, here's what to expect when we work together",
+		"step": "Step",
+		"clientLabel": "What you'll experience:",
+		"phases": [
+			{
+				"title": "Discovery",
+				"description": "We start with a conversation about your goals, audience, and vision. I'll ask questions to understand what success looks like for your project and identify any technical requirements.",
+				"clientExperience": "A casual 30-minute call where you share your ideas and I listen. No pressure, just getting to know your project."
+			},
+			{
+				"title": "Design",
+				"description": "Based on our discovery call, I create mockups and wireframes showing the look and feel of your site. We iterate until you're excited about the direction.",
+				"clientExperience": "You'll receive visual mockups to review. Share feedback, and I'll refine until it feels right."
+			},
+			{
+				"title": "Development",
+				"description": "I build your site using modern, performant technologies. You'll get regular progress updates and a preview link to see the site come together.",
+				"clientExperience": "Watch your site take shape with weekly updates. Test it yourself and let me know what to adjust."
+			},
+			{
+				"title": "Launch",
+				"description": "Final testing, optimization, and deployment. I handle all the technical details and make sure everything works perfectly before going live.",
+				"clientExperience": "A smooth handoff with training on how to update your site. Ongoing support available if needed."
+			}
+		],
+		"timeline": {
+			"title": "Typical Timelines",
+			"items": [
+				{ "type": "Landing Page", "duration": "1-2 weeks" },
+				{ "type": "Portfolio", "duration": "2-3 weeks" },
+				{ "type": "E-commerce", "duration": "4-6 weeks" },
+				{ "type": "Web App", "duration": "6-8 weeks" }
+			]
+		},
+		"cta": {
+			"title": "Ready to get started?",
+			"description": "Let's discuss your project and see how I can help.",
+			"button": "Start a Conversation"
+		}
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"description": "Everything you need to know about working with me",
+		"sections": [
+			{
+				"title": "Business & Pricing",
+				"items": [
+					{
+						"question": "How much does a website cost?",
+						"answer": "Every project is unique, so I provide custom quotes based on your specific needs. A simple landing page starts around $1,500, while a full e-commerce site with custom features can range from $5,000-$15,000+. Contact me for a free quote tailored to your project."
+					},
+					{
+						"question": "How long does a project take?",
+						"answer": "Timeline depends on complexity. A landing page typically takes 1-2 weeks, a portfolio site 2-3 weeks, and a full e-commerce site 4-8 weeks. I'll provide a specific timeline during our initial consultation."
+					},
+					{
+						"question": "What's your payment structure?",
+						"answer": "I typically require 50% upfront to begin work, with the remaining 50% due upon project completion. For larger projects, we can arrange milestone-based payments."
+					},
+					{
+						"question": "Do you offer revisions?",
+						"answer": "Yes! Each project includes 2-3 rounds of revisions depending on scope. I want you to be 100% satisfied with the final result. Additional revisions beyond the included rounds are billed hourly."
+					},
+					{
+						"question": "What if I need changes after launch?",
+						"answer": "I offer ongoing maintenance packages for clients who need regular updates. For one-off changes, I'm happy to provide hourly support. Most clients don't need much after launch since I build sites to be easy to update."
+					}
+				]
+			},
+			{
+				"title": "Technical Questions",
+				"items": [
+					{
+						"question": "What technologies do you use?",
+						"answer": "I specialize in modern web technologies: React, Next.js, TypeScript, and Tailwind CSS for the frontend. For e-commerce, I work with Shopify, WooCommerce, or custom solutions depending on your needs."
+					},
+					{
+						"question": "Will my website be mobile-friendly?",
+						"answer": "Absolutely! Every site I build is fully responsive and tested across all devices. Mobile-first design is standard in all my projects."
+					},
+					{
+						"question": "Do you handle hosting?",
+						"answer": "I can recommend and set up hosting for you. Most of my sites are deployed on Vercel or Netlify for optimal performance. I'll guide you through the process and can include hosting setup in the project."
+					},
+					{
+						"question": "Can you add custom features like booking or payments?",
+						"answer": "Yes! I regularly integrate booking systems, payment processing (Stripe, PayPal), user authentication, and other custom functionality. Let me know what you need during our consultation."
+					},
+					{
+						"question": "Will I be able to update the site myself?",
+						"answer": "Depending on your needs, I can build with a content management system (CMS) that lets you easily update text, images, and content. I'll also provide training on how to make updates."
+					}
+				]
+			}
+		],
+		"cta": {
+			"title": "Still have questions?",
+			"description": "I'm happy to answer any other questions you might have. Let's chat!",
+			"button": "Get in Touch"
+		}
+	}
 }

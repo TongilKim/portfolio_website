@@ -1,26 +1,26 @@
-import { useState } from "react";
+import { useForm as useFormspree } from "@formspree/react";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
-	Mail,
-	Phone,
-	MapPin,
-	Send,
-	Loader2,
 	CheckCircle2,
+	Loader2,
+	Mail,
+	MapPin,
+	Phone,
+	Send,
 	XCircle,
 } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm as useFormspree } from "@formspree/react";
+import { useTranslation } from "react-i18next";
+import { FORMSPREE_FORM_ID } from "@/config/formspree";
+import {
+	type ContactFormData,
+	contactSchema,
+} from "@/lib/validations/contactSchema";
 import { Button } from "./ui/button";
+import { Card, CardContent } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Card, CardContent } from "./ui/card";
-import {
-	contactSchema,
-	type ContactFormData,
-} from "@/lib/validations/contactSchema";
-import { FORMSPREE_FORM_ID } from "@/config/formspree";
 
 export function Contact() {
 	const { t } = useTranslation();
