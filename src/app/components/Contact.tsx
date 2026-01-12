@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2, XCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
@@ -13,6 +14,14 @@ import { FORMSPREE_FORM_ID } from "@/config/formspree";
 export function Contact() {
   const { t } = useTranslation();
 
+  // Track form values for button disable state
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    projectType: "",
+    message: "",
+  });
+
   const {
     register,
     handleSubmit,
@@ -22,6 +31,16 @@ export function Contact() {
     resolver: zodResolver(contactSchema),
     mode: "onBlur",
   });
+
+  const isFormFilled =
+    formValues.name.length >= 2 &&
+    formValues.email.length > 0 && formValues.email.includes('@') &&
+    formValues.projectType.length >= 1 &&
+    formValues.message.length >= 10;
+
+  const handleInputChange = (field: keyof typeof formValues) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormValues(prev => ({ ...prev, [field]: e.target.value }));
+  };
 
   const [formspreeState, submitToFormspree] = useFormspree(FORMSPREE_FORM_ID);
 
@@ -100,7 +119,9 @@ export function Contact() {
                   <Input
                     id="name"
                     placeholder={t('contact.form.namePlaceholder')}
-                    {...register("name")}
+                    {...register("name", {
+                      onChange: handleInputChange("name")
+                    })}
                     aria-invalid={errors.name ? "true" : "false"}
                   />
                   {errors.name && (
@@ -118,7 +139,9 @@ export function Contact() {
                     id="email"
                     type="email"
                     placeholder={t('contact.form.emailPlaceholder')}
-                    {...register("email")}
+                    {...register("email", {
+                      onChange: handleInputChange("email")
+                    })}
                     aria-invalid={errors.email ? "true" : "false"}
                   />
                   {errors.email && (
@@ -135,7 +158,9 @@ export function Contact() {
                   <Input
                     id="projectType"
                     placeholder={t('contact.form.projectPlaceholder')}
-                    {...register("projectType")}
+                    {...register("projectType", {
+                      onChange: handleInputChange("projectType")
+                    })}
                     aria-invalid={errors.projectType ? "true" : "false"}
                   />
                   {errors.projectType && (
@@ -153,7 +178,9 @@ export function Contact() {
                     id="message"
                     placeholder={t('contact.form.messagePlaceholder')}
                     rows={5}
-                    {...register("message")}
+                    {...register("message", {
+                      onChange: handleInputChange("message")
+                    })}
                     aria-invalid={errors.message ? "true" : "false"}
                   />
                   {errors.message && (
@@ -163,7 +190,7 @@ export function Contact() {
                   )}
                 </div>
 
-                <Button type="submit" className="w-full gap-2" disabled={formspreeState.submitting}>
+                <Button type="submit" className="w-full gap-2" disabled={!isFormFilled || formspreeState.submitting}>
                   {formspreeState.submitting ? (
                     <>
                       <Loader2 size={16} className="animate-spin" />

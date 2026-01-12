@@ -39,11 +39,6 @@
       "experienceLabel": "Years Experience"
     }
   },
-  "heroV2": {
-    "title": "I create websites for your business",
-    "description": "Clean, functional web design and development. I help businesses establish their online presence.",
-    "cta": "Get in touch"
-  },
   "services": {
     "title": "What Can I Build For You?",
     "description": "Every project is custom-built to match your specific needs. Here's what I specialize in:",
@@ -77,32 +72,6 @@
       }
     ]
   },
-  "servicesV2": {
-    "title": "What I build",
-    "cta": "Let's discuss your project",
-    "items": [
-      {
-        "title": "E-Commerce",
-        "description": "Online stores with payments and inventory.",
-        "idealFor": "Retailers & product sellers"
-      },
-      {
-        "title": "Portfolios",
-        "description": "Showcase sites for creative work.",
-        "idealFor": "Creatives & freelancers"
-      },
-      {
-        "title": "Landing Pages",
-        "description": "High-converting marketing pages.",
-        "idealFor": "Startups & campaigns"
-      },
-      {
-        "title": "Web Apps",
-        "description": "Custom interactive applications.",
-        "idealFor": "SaaS & internal tools"
-      }
-    ]
-  },
   "portfolio": {
     "title": "Featured Projects",
     "description": "A showcase of recent work demonstrating my expertise in web development",
@@ -118,23 +87,6 @@
       {
         "title": "Mobile App Landing Page",
         "description": "Eye-catching landing page for a mobile app with download tracking and analytics."
-      }
-    ]
-  },
-  "workV2": {
-    "title": "Selected work",
-    "projects": [
-      {
-        "title": "Portfolio Site",
-        "type": "Design & Development"
-      },
-      {
-        "title": "Online Store",
-        "type": "E-Commerce"
-      },
-      {
-        "title": "App Landing",
-        "type": "Marketing Site"
       }
     ]
   },
@@ -189,25 +141,6 @@
       "error": "Oops! Something went wrong. Please try again or email me directly."
     }
   },
-  "contactV2": {
-    "title": "Let's talk",
-    "description": "Have a project in mind? Send me a message and I'll get back to you within 24 hours.",
-    "info": {
-      "emailLabel": "Email",
-      "email": "hello@webcraft.com",
-      "phoneLabel": "Phone",
-      "phone": "+1 (555) 123-4567"
-    },
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send message",
-      "sending": "Sending...",
-      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
-      "error": "Oops! Something went wrong. Please try again or email me directly."
-    }
-  },
   "footer": {
     "description": "Creating beautiful, functional websites that help businesses grow. Let's turn your vision into reality.",
     "quickLinks": "Quick Links",
@@ -219,14 +152,6 @@
       "SEO"
     ],
     "copyright": "WebCraft. All rights reserved."
-  },
-  "footerV2": {
-    "copyright": "All rights reserved",
-    "social": {
-      "twitter": "Twitter",
-      "linkedin": "LinkedIn",
-      "github": "GitHub"
-    }
   },
   "validation": {
     "name": {
