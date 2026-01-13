@@ -4,19 +4,29 @@ import { z } from "zod";
 export const contactSchema = z.object({
 	name: z
 		.string()
-		.min(2, { message: "validation.name.min" })
-		.max(50, { message: "validation.name.max" }),
+		.default("")
+		.refine((val) => val.length >= 2, { message: "validation.name.min" })
+		.refine((val) => val.length <= 50, { message: "validation.name.max" }),
 	email: z
 		.string()
-		.min(1, { message: "validation.email.required" })
-		.email({ message: "validation.email.invalid" }),
+		.default("")
+		.refine((val) => val.length >= 1, { message: "validation.email.required" })
+		.refine((val) => val.includes("@") && val.includes("."), {
+			message: "validation.email.invalid",
+		}),
 	projectType: z
 		.string()
-		.min(1, { message: "validation.projectType.required" }),
+		.default("")
+		.refine((val) => val.length >= 1, {
+			message: "validation.projectType.required",
+		}),
 	message: z
 		.string()
-		.min(10, { message: "validation.message.min" })
-		.max(1000, { message: "validation.message.max" }),
+		.default("")
+		.refine((val) => val.length >= 10, { message: "validation.message.min" })
+		.refine((val) => val.length <= 1000, {
+			message: "validation.message.max",
+		}),
 });
 
 // TypeScript type inferred from schema
