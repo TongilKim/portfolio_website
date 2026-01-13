@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -7,9 +7,38 @@ import { Button } from "./ui/button";
 
 export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [activeSection, setActiveSection] = useState("home");
 	const { t } = useTranslation();
 	const location = useLocation();
 	const isHomePage = location.pathname === "/";
+
+	useEffect(() => {
+		if (!isHomePage) {
+			setActiveSection("");
+			return;
+		}
+
+		const handleScroll = () => {
+			const sections = ["home", "services", "portfolio"];
+			const headerOffset = 100;
+
+			for (const sectionId of sections.reverse()) {
+				const element = document.getElementById(sectionId);
+				if (element) {
+					const rect = element.getBoundingClientRect();
+					if (rect.top <= headerOffset) {
+						setActiveSection(sectionId);
+						return;
+					}
+				}
+			}
+			setActiveSection("home");
+		};
+
+		handleScroll();
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [isHomePage]);
 
 	const scrollToSection = (id: string) => {
 		if (isHomePage) {
@@ -37,21 +66,21 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className={`cursor-pointer transition-colors ${isHomePage ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.home")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("services")}
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.services")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("portfolio")}
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.portfolio")}
 						</button>
@@ -104,21 +133,21 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className={`text-left cursor-pointer transition-colors ${isHomePage ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.home")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("services")}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.services")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("portfolio")}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.portfolio")}
 						</button>
