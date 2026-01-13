@@ -1,17 +1,11 @@
 import { ArrowRight, Code2, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
 
 export function Hero() {
 	const { t } = useTranslation();
-
-	const scrollToContact = () => {
-		const element = document.getElementById("contact");
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
-		}
-	};
 
 	const scrollToPortfolio = () => {
 		const element = document.getElementById("portfolio");
@@ -34,17 +28,19 @@ export function Hero() {
 						</div>
 
 						<h1 className="text-5xl md:text-6xl lg:text-7xl">
-							{t("hero.title")}
-							<span className="text-blue-600"> {t("hero.titleHighlight")}</span>
+							{t("hero.title")}{" "}
+							<span className="text-blue-600">{t("hero.titleHighlight")}</span>
 						</h1>
 
 						<p className="text-xl text-gray-600">{t("hero.description")}</p>
 
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Button size="lg" onClick={scrollToContact} className="gap-2">
-								{t("hero.cta.start")}
-								<ArrowRight size={20} />
-							</Button>
+							<Link to="/contact">
+								<Button size="lg" className="gap-2">
+									{t("hero.cta.start")}
+									<ArrowRight size={20} />
+								</Button>
+							</Link>
 							<Button
 								size="lg"
 								variant="outline"

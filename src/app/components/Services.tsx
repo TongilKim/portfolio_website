@@ -6,6 +6,7 @@ import {
 	ShoppingCart,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import {
 	Card,
@@ -28,10 +29,6 @@ export function Services() {
 	const services = t("services.items", {
 		returnObjects: true,
 	}) as ServiceItem[];
-
-	const scrollToContact = () => {
-		document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-	};
 
 	return (
 		<section id="services" className="py-20 bg-white">
@@ -67,14 +64,15 @@ export function Services() {
 									<p className="text-sm text-blue-600 font-medium mt-4">
 										{t("services.idealForLabel")}: {service.idealFor}
 									</p>
-									<Button
-										variant="outline"
-										className="w-full mt-4 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
-										onClick={scrollToContact}
-									>
-										{t("services.cta.card")}
-										<ArrowRight size={16} className="ml-2" />
-									</Button>
+									<Link to="/contact" className="w-full block">
+										<Button
+											variant="outline"
+											className="w-full mt-4 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
+										>
+											{t("services.cta.card")}
+											<ArrowRight size={16} className="ml-2" />
+										</Button>
+									</Link>
 								</CardContent>
 							</Card>
 						);
@@ -89,14 +87,15 @@ export function Services() {
 					<p className="text-blue-100 mb-6 max-w-xl mx-auto">
 						{t("services.cta.sectionDescription")}
 					</p>
-					<Button
-						size="lg"
-						className="bg-white text-blue-600 hover:bg-blue-50"
-						onClick={scrollToContact}
-					>
-						{t("services.cta.button")}
-						<ArrowRight size={18} className="ml-2" />
-					</Button>
+					<Link to="/contact">
+						<Button
+							size="lg"
+							className="bg-white text-blue-600 hover:bg-blue-50"
+						>
+							{t("services.cta.button")}
+							<ArrowRight size={18} className="ml-2" />
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</section>

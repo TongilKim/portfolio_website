@@ -37,7 +37,7 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${isHomePage ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.home")}
 						</button>
@@ -57,36 +57,35 @@ export function Header() {
 						</button>
 						<Link
 							to="/about"
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.about")}
 						</Link>
 						<Link
 							to="/faq"
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.faq")}
 						</Link>
 						<Link
 							to="/process"
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+							className={`cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.process")}
 						</Link>
-						<button
-							type="button"
-							onClick={() => scrollToSection("contact")}
-							className="cursor-pointer hover:text-blue-600 transition-colors"
+						<Link
+							to="/contact"
+							className={`cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.contact")}
-						</button>
+						</Link>
 					</nav>
 
 					<div className="hidden md:flex items-center gap-4">
 						<LanguageSwitcher />
-						<Button type="button" onClick={() => scrollToSection("contact")}>
-							{t("nav.getStarted")}
-						</Button>
+						<Link to="/contact">
+							<Button type="button">{t("nav.getStarted")}</Button>
+						</Link>
 					</div>
 
 					{/* Mobile Menu Button */}
@@ -105,7 +104,7 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${isHomePage ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.home")}
 						</button>
@@ -126,41 +125,39 @@ export function Header() {
 						<Link
 							to="/about"
 							onClick={() => setIsMenuOpen(false)}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.about")}
 						</Link>
 						<Link
 							to="/faq"
 							onClick={() => setIsMenuOpen(false)}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.faq")}
 						</Link>
 						<Link
 							to="/process"
 							onClick={() => setIsMenuOpen(false)}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.process")}
 						</Link>
-						<button
-							type="button"
-							onClick={() => scrollToSection("contact")}
-							className="text-left cursor-pointer hover:text-blue-600 transition-colors"
+						<Link
+							to="/contact"
+							onClick={() => setIsMenuOpen(false)}
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
 						>
 							{t("nav.contact")}
-						</button>
+						</Link>
 						<div className="pt-2 border-t">
 							<LanguageSwitcher />
 						</div>
-						<Button
-							type="button"
-							onClick={() => scrollToSection("contact")}
-							className="w-full"
-						>
-							{t("nav.getStarted")}
-						</Button>
+						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+							<Button type="button" className="w-full">
+								{t("nav.getStarted")}
+							</Button>
+						</Link>
 					</nav>
 				)}
 			</div>

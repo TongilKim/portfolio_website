@@ -22,10 +22,10 @@
 		"close": "Close"
 	},
 	"hero": {
-		"badge": "Professional Web Development",
-		"title": "Transform Your Vision Into",
-		"titleHighlight": "Reality",
-		"description": "I create stunning, responsive websites that help your business grow. From concept to launch, I'll bring your digital dreams to life.",
+		"badge": "Design to Code Expert",
+		"title": "Your Designs, Perfectly",
+		"titleHighlight": "Implemented",
+		"description": "Got your Figma designs and PRD ready? I'll turn them into pixel-perfect, production-ready code. Your vision, precisely built.",
 		"cta": {
 			"start": "Start Your Project",
 			"portfolio": "View Portfolio"
@@ -40,35 +40,35 @@
 		}
 	},
 	"services": {
-		"title": "What Can I Build For You?",
-		"description": "Every project is custom-built to match your specific needs. Here's what I specialize in:",
-		"idealForLabel": "Ideal for",
+		"title": "What Can I Implement For You?",
+		"description": "I build exactly what your design files and specifications call for.",
+		"idealForLabel": "Required materials",
 		"cta": {
 			"card": "Get a Quote",
-			"section": "Ready to Start Your Project?",
-			"sectionDescription": "Tell me about your vision and I'll provide a custom quote within 24 hours.",
+			"section": "Design and PRD Ready?",
+			"sectionDescription": "Share your Figma link and documentation, and I'll provide an accurate quote within 24 hours.",
 			"button": "Request a Quote"
 		},
 		"items": [
 			{
 				"title": "E-Commerce Store",
-				"description": "Complete online stores with secure payments, inventory management, and seamless checkout experiences.",
-				"idealFor": "Retailers, product sellers, subscription businesses"
+				"description": "Pixel-perfect implementation of your store design with payment systems, inventory, and cart functionality.",
+				"idealFor": "Figma designs, product list, payment flow PRD"
 			},
 			{
-				"title": "Portfolio Website",
-				"description": "Stunning showcases for your work with elegant galleries, smooth animations, and personal branding.",
-				"idealFor": "Creatives, freelancers, agencies, photographers"
+				"title": "Responsive Website",
+				"description": "Your designs implemented to work flawlessly across all devices and screen sizes.",
+				"idealFor": "Figma designs (Desktop/Mobile), content docs"
 			},
 			{
 				"title": "Landing Page",
-				"description": "High-converting single pages designed to capture leads, launch products, or promote campaigns.",
-				"idealFor": "Startups, product launches, marketing campaigns"
+				"description": "High-converting landing pages built exactly as designed, with all specified interactions.",
+				"idealFor": "Figma designs, animation specs, form requirements"
 			},
 			{
 				"title": "Web Application",
-				"description": "Custom interactive applications with user authentication, dashboards, and dynamic functionality.",
-				"idealFor": "SaaS products, internal tools, custom platforms"
+				"description": "Complex interactions and features developed precisely according to your PRD specifications.",
+				"idealFor": "Figma designs, detailed PRD, API documentation"
 			}
 		]
 	},
@@ -112,11 +112,11 @@
 		"quote": "Success is not about the tools you use, but how you use them to solve real problems for real people."
 	},
 	"contact": {
-		"title": "Let's Work Together",
-		"description": "Ready to start your project? Get in touch and let's create something amazing",
+		"title": "Project Inquiry",
+		"description": "Got your designs and PRD ready? Share your materials for an accurate quote",
 		"getInTouch": {
 			"title": "Get In Touch",
-			"description": "Fill out the form and I'll get back to you within 24 hours. Or reach out directly using the contact information below."
+			"description": "Include your Figma link and PRD for a more accurate quote. I'll respond within 24 hours."
 		},
 		"info": {
 			"emailLabel": "Email",
@@ -132,9 +132,9 @@
 			"email": "Email Address",
 			"emailPlaceholder": "john@example.com",
 			"project": "Project Type",
-			"projectPlaceholder": "E-commerce website, Portfolio, etc.",
-			"message": "Project Details",
-			"messagePlaceholder": "Tell me about your project...",
+			"projectPlaceholder": "Website, Web App, Landing Page, etc.",
+			"message": "Project Details (Include Figma Link)",
+			"messagePlaceholder": "Share your Figma link, PRD document, and desired timeline...",
 			"submit": "Send Message",
 			"sending": "Sending...",
 			"success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
@@ -142,10 +142,10 @@
 		}
 	},
 	"footer": {
-		"description": "Creating beautiful, functional websites that help businesses grow. Let's turn your vision into reality.",
+		"description": "Turning Figma designs into pixel-perfect code. Your designs ready? Leave the development to me.",
 		"quickLinks": "Quick Links",
 		"servicesTitle": "Services",
-		"servicesList": ["Web Development", "UI/UX Design", "E-Commerce", "SEO"],
+		"servicesList": ["Figma to Code", "Web Development", "Responsive Build", "Web App Dev"],
 		"copyright": "WebCraft. All rights reserved."
 	},
 	"validation": {
@@ -212,36 +212,36 @@
 		],
 		"quote": "The best websites aren't just pretty—they solve real problems for real people.",
 		"cta": {
-			"title": "Let's Build Something Together",
-			"description": "Whether you have a clear vision or just a rough idea, I'd love to hear about your project.",
-			"button": "Start a Conversation"
+			"title": "Let Me Implement Your Designs",
+			"description": "Got Figma designs and PRD ready? Get an accurate quote today.",
+			"button": "Request a Quote"
 		}
 	},
 	"process": {
 		"title": "How I Work",
-		"description": "From first conversation to launch, here's what to expect when we work together",
+		"description": "From receiving your designs to delivery — here's the process",
 		"step": "Step",
-		"clientLabel": "What you'll experience:",
+		"clientLabel": "What you'll provide:",
 		"phases": [
 			{
-				"title": "Discovery",
-				"description": "We start with a conversation about your goals, audience, and vision. I'll ask questions to understand what success looks like for your project and identify any technical requirements.",
-				"clientExperience": "A casual 30-minute call where you share your ideas and I listen. No pressure, just getting to know your project."
+				"title": "Review",
+				"description": "I thoroughly review your Figma designs and PRD. I'll verify technical feasibility and ask clarifying questions about any ambiguous areas.",
+				"clientExperience": "Please share your Figma link, PRD document, and API docs if applicable. I'll prepare questions after review."
 			},
 			{
-				"title": "Design",
-				"description": "Based on our discovery call, I create mockups and wireframes showing the look and feel of your site. We iterate until you're excited about the direction.",
-				"clientExperience": "You'll receive visual mockups to review. Share feedback, and I'll refine until it feels right."
+				"title": "Planning",
+				"description": "I analyze the designs to plan component architecture, tech stack, and development timeline. You'll receive an accurate quote and schedule.",
+				"clientExperience": "You'll receive a detailed quote and development timeline. Feel free to ask any questions."
 			},
 			{
 				"title": "Development",
-				"description": "I build your site using modern, performant technologies. You'll get regular progress updates and a preview link to see the site come together.",
-				"clientExperience": "Watch your site take shape with weekly updates. Test it yourself and let me know what to adjust."
+				"description": "I implement your designs pixel-perfectly in code. Weekly progress updates and a staging environment for you to review.",
+				"clientExperience": "Review progress via weekly demos. Flag any deviations from the design immediately."
 			},
 			{
-				"title": "Launch",
-				"description": "Final testing, optimization, and deployment. I handle all the technical details and make sure everything works perfectly before going live.",
-				"clientExperience": "A smooth handoff with training on how to update your site. Ongoing support available if needed."
+				"title": "QA & Deploy",
+				"description": "Cross-browser testing, responsive verification, and performance optimization before deployment. Final check that all features match the PRD.",
+				"clientExperience": "Final review with a test checklist. Deployment proceeds after your approval."
 			}
 		],
 		"timeline": {
@@ -254,62 +254,62 @@
 			]
 		},
 		"cta": {
-			"title": "Ready to get started?",
-			"description": "Let's discuss your project and see how I can help.",
-			"button": "Start a Conversation"
+			"title": "Designs Ready?",
+			"description": "Share your Figma link and PRD for an accurate quote.",
+			"button": "Request a Quote"
 		}
 	},
 	"faq": {
 		"title": "Frequently Asked Questions",
-		"description": "Everything you need to know about working with me",
+		"description": "What you need to know before starting a project",
 		"sections": [
 			{
-				"title": "Business & Pricing",
+				"title": "Project Preparation",
 				"items": [
 					{
-						"question": "How much does a website cost?",
-						"answer": "Every project is unique, so I provide custom quotes based on your specific needs. A simple landing page starts around $1,500, while a full e-commerce site with custom features can range from $5,000-$15,000+. Contact me for a free quote tailored to your project."
+						"question": "What materials do I need to provide?",
+						"answer": "At minimum, you'll need Figma design files (or link) and a PRD (product requirements document). Without finalized designs, I won't be able to start work. API documentation and brand guidelines are helpful if available."
 					},
 					{
-						"question": "How long does a project take?",
-						"answer": "Timeline depends on complexity. A landing page typically takes 1-2 weeks, a portfolio site 2-3 weeks, and a full e-commerce site 4-8 weeks. I'll provide a specific timeline during our initial consultation."
+						"question": "Can you work without designs?",
+						"answer": "I specialize in design implementation, so finalized designs are required. If you don't have designs yet, please work with a designer first and reach out when ready. I can recommend designers if needed."
 					},
 					{
-						"question": "What's your payment structure?",
-						"answer": "I typically require 50% upfront to begin work, with the remaining 50% due upon project completion. For larger projects, we can arrange milestone-based payments."
+						"question": "What design formats do you support?",
+						"answer": "Figma is strongly preferred. I can also work with Sketch and Adobe XD files, but Figma allows for the most efficient workflow. PSD or image files alone won't allow for accurate implementation."
 					},
 					{
-						"question": "Do you offer revisions?",
-						"answer": "Yes! Each project includes 2-3 rounds of revisions depending on scope. I want you to be 100% satisfied with the final result. Additional revisions beyond the included rounds are billed hourly."
+						"question": "How detailed should the PRD be?",
+						"answer": "The more detailed, the better. Include all interactions, state changes, and error handling. Any unclear areas will require clarification before development, which may delay the timeline."
 					},
 					{
-						"question": "What if I need changes after launch?",
-						"answer": "I offer ongoing maintenance packages for clients who need regular updates. For one-off changes, I'm happy to provide hourly support. Most clients don't need much after launch since I build sites to be easy to update."
+						"question": "How do you calculate quotes?",
+						"answer": "Quotes are based on design complexity, number of pages, interaction requirements, and feature specifications. I provide accurate quotes after reviewing your Figma and PRD. Landing pages start at $1,500, web apps at $5,000."
 					}
 				]
 			},
 			{
-				"title": "Technical Questions",
+				"title": "Development Process",
 				"items": [
 					{
 						"question": "What technologies do you use?",
-						"answer": "I specialize in modern web technologies: React, Next.js, TypeScript, and Tailwind CSS for the frontend. For e-commerce, I work with Shopify, WooCommerce, or custom solutions depending on your needs."
+						"answer": "I primarily use React, Next.js, TypeScript, and Tailwind CSS. I'll recommend the optimal tech stack based on your project requirements."
 					},
 					{
-						"question": "Will my website be mobile-friendly?",
-						"answer": "Absolutely! Every site I build is fully responsive and tested across all devices. Mobile-first design is standard in all my projects."
+						"question": "Is responsive included by default?",
+						"answer": "Yes, all projects include responsive implementation. However, your designs must include mobile/tablet versions. Desktop-only designs will limit responsive implementation."
 					},
 					{
-						"question": "Do you handle hosting?",
-						"answer": "I can recommend and set up hosting for you. Most of my sites are deployed on Vercel or Netlify for optimal performance. I'll guide you through the process and can include hosting setup in the project."
+						"question": "What if the implementation differs from the design?",
+						"answer": "I aim for pixel-perfect implementation. If you spot any deviations during weekly demos, flag them immediately. Revisions within the original design scope are included at no extra cost."
 					},
 					{
-						"question": "Can you add custom features like booking or payments?",
-						"answer": "Yes! I regularly integrate booking systems, payment processing (Stripe, PayPal), user authentication, and other custom functionality. Let me know what you need during our consultation."
+						"question": "Can I change designs during development?",
+						"answer": "Design changes after development starts will incur additional costs and timeline delays. I strongly recommend finalizing designs before starting development."
 					},
 					{
-						"question": "Will I be able to update the site myself?",
-						"answer": "Depending on your needs, I can build with a content management system (CMS) that lets you easily update text, images, and content. I'll also provide training on how to make updates."
+						"question": "Do you handle deployment?",
+						"answer": "Yes, I deploy to your preferred environment — Vercel, Netlify, AWS, etc. Hosting setup and domain configuration assistance is included."
 					}
 				]
 			}

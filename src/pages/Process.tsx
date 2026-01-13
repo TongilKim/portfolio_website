@@ -96,7 +96,7 @@ export function Process() {
 					</h3>
 					<p className="text-blue-100 mb-6">{t("process.cta.description")}</p>
 					<a
-						href="/#contact"
+						href="/contact"
 						className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-medium cursor-pointer hover:bg-blue-50 transition-colors"
 					>
 						{t("process.cta.button")}
