@@ -13,11 +13,15 @@ i18n
 			en: { translation: enTranslation },
 			ko: { translation: koTranslation },
 		},
-		lng: "ko",
 		fallbackLng: "ko",
 		debug: import.meta.env.DEV,
 		interpolation: {
 			escapeValue: false, // React already escapes
+		},
+		detection: {
+			order: ["localStorage", "navigator"],
+			caches: ["localStorage"],
+			lookupLocalStorage: "i18nextLng",
 		},
 	});
 
