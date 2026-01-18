@@ -1,4 +1,3 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export function Footer() {
@@ -16,29 +15,6 @@ export function Footer() {
 							{t("app.title")}
 						</div>
 						<p className="text-gray-400 mb-4">{t("footer.description")}</p>
-						<div className="flex gap-4">
-							<button
-								type="button"
-								className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors"
-								aria-label="Twitter"
-							>
-								<Twitter size={20} />
-							</button>
-							<button
-								type="button"
-								className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors"
-								aria-label="LinkedIn"
-							>
-								<Linkedin size={20} />
-							</button>
-							<button
-								type="button"
-								className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors"
-								aria-label="GitHub"
-							>
-								<Github size={20} />
-							</button>
-						</div>
 					</div>
 
 					<div>
