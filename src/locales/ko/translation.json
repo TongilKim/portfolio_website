@@ -242,10 +242,10 @@
 		"timeline": {
 			"title": "일반적인 일정",
 			"items": [
-				{ "type": "랜딩 페이지", "duration": "1-2주" },
-				{ "type": "포트폴리오", "duration": "2-3주" },
-				{ "type": "이커머스", "duration": "4-6주" },
-				{ "type": "웹 앱", "duration": "6-8주" }
+				{ "type": "랜딩 페이지", "duration": "2-4일" },
+				{ "type": "포트폴리오", "duration": "3-5일" },
+				{ "type": "이커머스", "duration": "1-2주" },
+				{ "type": "웹 앱", "duration": "2-3주" }
 			]
 		},
 		"cta": {

@@ -242,10 +242,10 @@
 		"timeline": {
 			"title": "Typical Timelines",
 			"items": [
-				{ "type": "Landing Page", "duration": "1-2 weeks" },
-				{ "type": "Portfolio", "duration": "2-3 weeks" },
-				{ "type": "E-commerce", "duration": "4-6 weeks" },
-				{ "type": "Web App", "duration": "6-8 weeks" }
+				{ "type": "Landing Page", "duration": "2-4 days" },
+				{ "type": "Portfolio", "duration": "3-5 days" },
+				{ "type": "E-commerce", "duration": "1-2 weeks" },
+				{ "type": "Web App", "duration": "2-3 weeks" }
 			]
 		},
 		"cta": {
