@@ -1,11 +1,19 @@
 import { expect, test } from "@playwright/test";
 
+// Helper to wait for intro animation to complete on homepage
+async function waitForIntroAnimation(page: import("@playwright/test").Page) {
+	const introOverlay = page.locator(".fixed.inset-0.z-50.bg-gray-900");
+	await introOverlay.waitFor({ state: "hidden", timeout: 3000 }).catch(() => {});
+}
+
 test.describe("Contact Form", () => {
 	// Use desktop viewport for consistent testing
 	test.use({ viewport: { width: 1280, height: 720 } });
 
 	test.beforeEach(async ({ page }) => {
 		await page.goto("/");
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
 		// Scroll to contact section
 		await page.locator("#contact").scrollIntoViewIfNeeded();
 	});

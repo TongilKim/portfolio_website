@@ -1,5 +1,11 @@
 import { expect, test } from "@playwright/test";
 
+// Helper to wait for intro animation to complete on homepage
+async function waitForIntroAnimation(page: import("@playwright/test").Page) {
+	const introOverlay = page.locator(".fixed.inset-0.z-50.bg-gray-900");
+	await introOverlay.waitFor({ state: "hidden", timeout: 3000 }).catch(() => {});
+}
+
 test.describe("KakaoTalk Chat Button", () => {
 	test.use({ viewport: { width: 1280, height: 720 } });
 
@@ -10,7 +16,8 @@ test.describe("KakaoTalk Chat Button", () => {
 				localStorage.setItem("i18nextLng", "ko");
 			});
 			await page.goto("/");
-			await page.waitForTimeout(500);
+			// Wait for intro animation to complete
+			await waitForIntroAnimation(page);
 		});
 
 		test("floating button is visible in Korean", async ({ page }) => {
@@ -75,7 +82,8 @@ test.describe("KakaoTalk Chat Button", () => {
 				localStorage.setItem("i18nextLng", "en");
 			});
 			await page.goto("/");
-			await page.waitForTimeout(500);
+			// Wait for intro animation to complete
+			await waitForIntroAnimation(page);
 		});
 
 		test("floating button is hidden in English", async ({ page }) => {
@@ -116,7 +124,8 @@ test.describe("KakaoTalk Chat Button", () => {
 			localStorage.setItem("i18nextLng", "ko");
 		});
 		await page.goto("/");
-		await page.waitForTimeout(500);
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
 
 		// Button should be visible in Korean
 		let floatingButton = page.locator(

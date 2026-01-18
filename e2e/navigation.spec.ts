@@ -1,5 +1,14 @@
 import { expect, test } from "@playwright/test";
 
+// Helper to wait for intro animation to complete on homepage
+async function waitForIntroAnimation(page: import("@playwright/test").Page) {
+	const introOverlay = page.locator(".fixed.inset-0.z-50.bg-gray-900");
+	// Wait for animation to disappear (timeout after 3s)
+	await introOverlay.waitFor({ state: "hidden", timeout: 3000 }).catch(() => {
+		// Animation may have already completed
+	});
+}
+
 test.describe("Navigation & Routing", () => {
 	// Use desktop viewport for these tests since they use desktop nav
 	test.use({ viewport: { width: 1280, height: 720 } });
@@ -7,8 +16,11 @@ test.describe("Navigation & Routing", () => {
 	test("homepage loads correctly", async ({ page }) => {
 		await page.goto("/");
 
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
+
 		// Check page title
-		await expect(page).toHaveTitle(/John Doe/);
+		await expect(page).toHaveTitle(/PixelFlow/);
 
 		// Check hero section is visible
 		await expect(page.locator("#home")).toBeVisible();
@@ -19,6 +31,9 @@ test.describe("Navigation & Routing", () => {
 
 	test("navigate to FAQ page", async ({ page }) => {
 		await page.goto("/");
+
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
 
 		// Click FAQ link in desktop navigation
 		await page.locator('header nav a[href="/faq"]').first().click();
@@ -35,6 +50,9 @@ test.describe("Navigation & Routing", () => {
 	test("navigate to Process page", async ({ page }) => {
 		await page.goto("/");
 
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
+
 		// Click Process link in desktop nav
 		await page.locator('header nav a[href="/process"]').first().click();
 
@@ -50,6 +68,9 @@ test.describe("Navigation & Routing", () => {
 	test("navigate to About page", async ({ page }) => {
 		await page.goto("/");
 
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
+
 		// Click About link in desktop nav
 		await page.locator('header nav a[href="/about"]').first().click();
 
@@ -62,6 +83,7 @@ test.describe("Navigation & Routing", () => {
 
 	test("browser back/forward buttons work", async ({ page }) => {
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 		await page.locator('header nav a[href="/faq"]').first().click();
 		await expect(page).toHaveURL("/faq");
 
@@ -76,6 +98,9 @@ test.describe("Navigation & Routing", () => {
 
 	test("scroll to portfolio section on homepage", async ({ page }) => {
 		await page.goto("/");
+
+		// Wait for intro animation to complete
+		await waitForIntroAnimation(page);
 
 		// Click portfolio button in nav (it's a button, not a link)
 		await page

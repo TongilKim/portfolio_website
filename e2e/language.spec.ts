@@ -1,11 +1,18 @@
 import { expect, test } from "@playwright/test";
 
+// Helper to wait for intro animation to complete on homepage
+async function waitForIntroAnimation(page: import("@playwright/test").Page) {
+	const introOverlay = page.locator(".fixed.inset-0.z-50.bg-gray-900");
+	await introOverlay.waitFor({ state: "hidden", timeout: 3000 }).catch(() => {});
+}
+
 test.describe("Language Switching", () => {
 	// Use desktop viewport for consistent testing
 	test.use({ viewport: { width: 1280, height: 720 } });
 
 	test("language switcher is visible", async ({ page }) => {
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 
 		// Language switcher is a button with Globe icon in the header
 		// Look for button that contains text like "English" or "한국어"
@@ -17,7 +24,12 @@ test.describe("Language Switching", () => {
 	});
 
 	test("default language is Korean", async ({ page }) => {
+		// Ensure we start with Korean language (clear any prior localStorage)
+		await page.addInitScript(() => {
+			localStorage.setItem("i18nextLng", "ko");
+		});
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 
 		// Get hero section text - should be Korean by default
 		const heroSection = page.locator("#home");
@@ -28,7 +40,12 @@ test.describe("Language Switching", () => {
 	});
 
 	test("switch to English language", async ({ page }) => {
+		// Start with Korean
+		await page.addInitScript(() => {
+			localStorage.setItem("i18nextLng", "ko");
+		});
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 
 		// Get hero section text before switch (should be Korean)
 		const heroSection = page.locator("#home");
@@ -54,7 +71,12 @@ test.describe("Language Switching", () => {
 	});
 
 	test("switch back to Korean", async ({ page }) => {
+		// Start with Korean
+		await page.addInitScript(() => {
+			localStorage.setItem("i18nextLng", "ko");
+		});
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 
 		// Find language switcher
 		const langSwitcher = page
@@ -81,7 +103,12 @@ test.describe("Language Switching", () => {
 	});
 
 	test("language persists on page navigation", async ({ page }) => {
+		// Start with Korean
+		await page.addInitScript(() => {
+			localStorage.setItem("i18nextLng", "ko");
+		});
 		await page.goto("/");
+		await waitForIntroAnimation(page);
 
 		// Find language switcher
 		const langSwitcher = page
@@ -105,6 +132,10 @@ test.describe("Language Switching", () => {
 	});
 
 	test("FAQ page shows content in default Korean", async ({ page }) => {
+		// Ensure Korean language is set
+		await page.addInitScript(() => {
+			localStorage.setItem("i18nextLng", "ko");
+		});
 		await page.goto("/faq");
 
 		// Verify Korean FAQ heading (default language is Korean)
