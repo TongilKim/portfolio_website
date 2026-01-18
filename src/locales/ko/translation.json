@@ -1,6 +1,6 @@
 {
 	"app": {
-		"title": "WebCraft",
+		"title": "PixelFlow",
 		"description": "전문 웹 개발 서비스"
 	},
 	"language": {
@@ -135,7 +135,7 @@
 	},
 	"footer": {
 		"description": "디자인 의도를 살린 정교한 웹 개발을 제공합니다. 디자인이 준비되셨다면, 개발은 맡겨주세요.",
-		"copyright": "WebCraft. All rights reserved."
+		"copyright": "PixelFlow. All rights reserved."
 	},
 	"kakao": {
 		"title": "카카오톡으로 빠른 상담",

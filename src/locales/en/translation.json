@@ -1,6 +1,6 @@
 {
 	"app": {
-		"title": "WebCraft",
+		"title": "PixelFlow",
 		"description": "Professional Web Development Services"
 	},
 	"language": {
@@ -135,7 +135,7 @@
 	},
 	"footer": {
 		"description": "Turning Figma designs into pixel-perfect code. Your designs ready? Leave the development to me.",
-		"copyright": "WebCraft. All rights reserved."
+		"copyright": "PixelFlow. All rights reserved."
 	},
 	"kakao": {
 		"title": "Quick Chat via KakaoTalk",
