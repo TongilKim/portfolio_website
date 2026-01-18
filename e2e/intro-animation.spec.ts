@@ -21,9 +21,13 @@ test.describe("Intro Animation", () => {
 		// Check for design.fig text in toolbar
 		await expect(page.getByText("design.fig")).toBeVisible();
 
-		// Check for window control dots (red, yellow, green)
-		const toolbar = page.locator(".bg-gray-800.px-4.py-2");
-		await expect(toolbar).toBeVisible();
+		// Check for window control dots (red, yellow, green) in the toolbar
+		const redDot = page.locator(".w-3.h-3.rounded-full.bg-red-500");
+		const yellowDot = page.locator(".w-3.h-3.rounded-full.bg-yellow-500");
+		const greenDot = page.locator(".w-3.h-3.rounded-full.bg-green-500");
+		await expect(redDot).toBeVisible();
+		await expect(yellowDot).toBeVisible();
+		await expect(greenDot).toBeVisible();
 	});
 
 	test("intro animation completes and reveals homepage", async ({ page }) => {

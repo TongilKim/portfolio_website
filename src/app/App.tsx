@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { KakaoChatFloatingButton } from "./components/KakaoChatButton";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { ViewportFadeOverlay } from "./components/ViewportFadeOverlay";
 
 export default function App() {
 	return (
@@ -15,6 +16,7 @@ export default function App() {
 			<ScrollToTop />
 			<div className="min-h-screen">
 				<Header />
+				<ViewportFadeOverlay />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/faq" element={<FAQ />} />
