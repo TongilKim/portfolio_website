@@ -135,9 +135,6 @@
 	},
 	"footer": {
 		"description": "Turning Figma designs into pixel-perfect code. Your designs ready? Leave the development to me.",
-		"quickLinks": "Quick Links",
-		"servicesTitle": "Services",
-		"servicesList": ["Figma to Code", "Web Development", "Responsive Build", "Web App Dev"],
 		"copyright": "WebCraft. All rights reserved."
 	},
 	"kakao": {
