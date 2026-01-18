@@ -118,14 +118,6 @@
 			"title": "Get In Touch",
 			"description": "Include your Figma link and PRD for a more accurate quote. I'll respond within 24 hours."
 		},
-		"info": {
-			"emailLabel": "Email",
-			"email": "hello@webcraft.com",
-			"phoneLabel": "Phone",
-			"phone": "+1 (555) 123-4567",
-			"locationLabel": "Location",
-			"location": "Available Worldwide"
-		},
 		"form": {
 			"name": "Your Name",
 			"namePlaceholder": "John Doe",
@@ -284,7 +276,7 @@
 					},
 					{
 						"question": "How do you calculate quotes?",
-						"answer": "Quotes are based on design complexity, number of pages, interaction requirements, and feature specifications. I provide accurate quotes after reviewing your Figma and PRD. Landing pages start at $1,500, web apps at $5,000."
+						"answer": "Quotes are based on design complexity, number of pages, interaction requirements, and feature specifications. I provide accurate quotes after reviewing your Figma and PRD."
 					}
 				]
 			},

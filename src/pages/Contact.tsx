@@ -3,9 +3,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
 	CheckCircle2,
 	Loader2,
-	Mail,
-	MapPin,
-	Phone,
 	Send,
 	XCircle,
 } from "lucide-react";
@@ -96,55 +93,6 @@ export function ContactPage() {
 							</p>
 						</div>
 
-						<div className="space-y-4">
-							<Card>
-								<CardContent className="flex items-center gap-4 p-4">
-									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-										<Mail className="text-blue-600" size={24} />
-									</div>
-									<div>
-										<div className="font-semibold">
-											{t("contact.info.emailLabel")}
-										</div>
-										<div className="text-gray-600">
-											{t("contact.info.email")}
-										</div>
-									</div>
-								</CardContent>
-							</Card>
-
-							<Card>
-								<CardContent className="flex items-center gap-4 p-4">
-									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-										<Phone className="text-blue-600" size={24} />
-									</div>
-									<div>
-										<div className="font-semibold">
-											{t("contact.info.phoneLabel")}
-										</div>
-										<div className="text-gray-600">
-											{t("contact.info.phone")}
-										</div>
-									</div>
-								</CardContent>
-							</Card>
-
-							<Card>
-								<CardContent className="flex items-center gap-4 p-4">
-									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-										<MapPin className="text-blue-600" size={24} />
-									</div>
-									<div>
-										<div className="font-semibold">
-											{t("contact.info.locationLabel")}
-										</div>
-										<div className="text-gray-600">
-											{t("contact.info.location")}
-										</div>
-									</div>
-								</CardContent>
-							</Card>
-						</div>
 					</div>
 
 					<Card>
