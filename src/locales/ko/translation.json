@@ -140,6 +140,12 @@
 		"servicesList": ["Figma to Code", "웹 개발", "반응형 구현", "웹앱 개발"],
 		"copyright": "WebCraft. All rights reserved."
 	},
+	"kakao": {
+		"title": "카카오톡으로 빠른 상담",
+		"description": "더 빠른 답변을 원하시나요? 카카오톡으로 바로 문의하세요.",
+		"chatButton": "카카오톡 문의하기",
+		"floatingButton": "카카오톡 상담"
+	},
 	"validation": {
 		"name": {
 			"required": "이름을 입력해주세요",

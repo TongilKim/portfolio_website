@@ -140,6 +140,12 @@
 		"servicesList": ["Figma to Code", "Web Development", "Responsive Build", "Web App Dev"],
 		"copyright": "WebCraft. All rights reserved."
 	},
+	"kakao": {
+		"title": "Quick Chat via KakaoTalk",
+		"description": "Want a faster response? Chat with me directly on KakaoTalk.",
+		"chatButton": "Chat on KakaoTalk",
+		"floatingButton": "KakaoTalk Chat"
+	},
 	"validation": {
 		"name": {
 			"required": "Please enter your name",

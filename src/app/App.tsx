@@ -6,6 +6,7 @@ import { Home } from "../pages/Home";
 import { Process } from "../pages/Process";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { KakaoChatFloatingButton } from "./components/KakaoChatButton";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
 					<Route path="/contact" element={<ContactPage />} />
 				</Routes>
 				<Footer />
+				<KakaoChatFloatingButton />
 			</div>
 		</BrowserRouter>
 	);
