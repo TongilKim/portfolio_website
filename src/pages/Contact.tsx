@@ -72,13 +72,13 @@ export function ContactPage() {
 	};
 
 	return (
-		<main className="py-20 bg-gray-50">
+		<main className="py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold mb-4">
+					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
 						{t("contact.title")}
 					</h1>
-					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("contact.description")}
 					</p>
 				</div>
@@ -86,18 +86,18 @@ export function ContactPage() {
 				<div className="grid md:grid-cols-2 gap-12">
 					<div className="space-y-8">
 						<div>
-							<h2 className="text-2xl font-bold mb-6">
+							<h2 className="text-2xl font-bold mb-6 text-white">
 								{t("contact.getInTouch.title")}
 							</h2>
-							<p className="text-gray-600 mb-8">
+							<p className="text-gray-300 mb-8">
 								{t("contact.getInTouch.description")}
 							</p>
 						</div>
 
 						{isKorean && (
-							<div className="bg-white p-6 rounded-lg border border-gray-200">
-								<h3 className="font-semibold mb-3">{t("kakao.title")}</h3>
-								<p className="text-gray-600 text-sm mb-4">
+							<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+								<h3 className="font-semibold mb-3 text-white">{t("kakao.title")}</h3>
+								<p className="text-gray-400 text-sm mb-4">
 									{t("kakao.description")}
 								</p>
 								<a
@@ -120,13 +120,13 @@ export function ContactPage() {
 						)}
 					</div>
 
-					<Card>
+					<Card className="bg-gray-800 border-gray-700">
 						<CardContent className="p-6">
 							<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 								<div>
 									<label
 										htmlFor="name"
-										className="block text-sm font-medium mb-2"
+										className="block text-sm font-medium mb-2 text-gray-200"
 									>
 										{t("contact.form.name")}
 									</label>
@@ -148,7 +148,7 @@ export function ContactPage() {
 								<div>
 									<label
 										htmlFor="email"
-										className="block text-sm font-medium mb-2"
+										className="block text-sm font-medium mb-2 text-gray-200"
 									>
 										{t("contact.form.email")}
 									</label>
@@ -171,7 +171,7 @@ export function ContactPage() {
 								<div>
 									<label
 										htmlFor="projectType"
-										className="block text-sm font-medium mb-2"
+										className="block text-sm font-medium mb-2 text-gray-200"
 									>
 										{t("contact.form.project")}
 									</label>
@@ -193,7 +193,7 @@ export function ContactPage() {
 								<div>
 									<label
 										htmlFor="message"
-										className="block text-sm font-medium mb-2"
+										className="block text-sm font-medium mb-2 text-gray-200"
 									>
 										{t("contact.form.message")}
 									</label>
@@ -232,18 +232,18 @@ export function ContactPage() {
 								</Button>
 
 								{formspreeState.succeeded && (
-									<div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg">
-										<CheckCircle2 className="text-green-600" size={20} />
-										<p className="text-sm text-green-800">
+									<div className="flex items-center gap-2 p-4 bg-green-900/30 border border-green-700 rounded-lg">
+										<CheckCircle2 className="text-green-400" size={20} />
+										<p className="text-sm text-green-300">
 											{t("contact.form.success")}
 										</p>
 									</div>
 								)}
 
 								{formspreeState.errors && (
-									<div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg">
-										<XCircle className="text-red-600" size={20} />
-										<p className="text-sm text-red-800">
+									<div className="flex items-center gap-2 p-4 bg-red-900/30 border border-red-700 rounded-lg">
+										<XCircle className="text-red-400" size={20} />
+										<p className="text-sm text-red-300">
 											{t("contact.form.error")}
 										</p>
 									</div>

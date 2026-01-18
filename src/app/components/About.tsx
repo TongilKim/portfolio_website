@@ -8,19 +8,19 @@ export function About() {
 	const skills = t("about.skills", { returnObjects: true }) as string[];
 
 	return (
-		<section id="about" className="py-20 bg-white">
+		<section id="about" className="py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div>
-						<h2 className="text-4xl md:text-5xl mb-6">{t("about.title")}</h2>
-						<div className="space-y-4 text-lg text-gray-600">
+						<h2 className="text-4xl md:text-5xl mb-6 text-white">{t("about.title")}</h2>
+						<div className="space-y-4 text-lg text-gray-300">
 							{paragraphs.map((paragraph) => (
 								<p key={paragraph}>{paragraph}</p>
 							))}
 						</div>
 						<Link
 							to="/about"
-							className="inline-flex items-center mt-6 text-blue-600 font-medium hover:underline"
+							className="inline-flex items-center mt-6 text-blue-400 font-medium hover:underline"
 						>
 							{t("about.learnMore")}
 							<ArrowRight size={18} className="ml-2" />
@@ -28,14 +28,14 @@ export function About() {
 					</div>
 
 					<div>
-						<h3 className="text-2xl font-bold mb-6">
+						<h3 className="text-2xl font-bold mb-6 text-white">
 							{t("about.skillsTitle")}
 						</h3>
 						<div className="grid grid-cols-2 gap-4">
 							{skills.map((skill) => (
-								<div key={skill} className="flex items-center gap-2">
+								<div key={skill} className="flex items-center gap-2 text-gray-200">
 									<CheckCircle
-										className="text-green-500 flex-shrink-0"
+										className="text-green-400 flex-shrink-0"
 										size={20}
 									/>
 									<span>{skill}</span>
@@ -43,8 +43,8 @@ export function About() {
 							))}
 						</div>
 
-						<div className="mt-8 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-600">
-							<p className="text-lg italic">"{t("about.quote")}"</p>
+						<div className="mt-8 p-6 bg-blue-900/30 rounded-lg border-l-4 border-blue-500">
+							<p className="text-lg italic text-gray-200">"{t("about.quote")}"</p>
 						</div>
 					</div>
 				</div>

@@ -54,10 +54,10 @@ export function Header() {
 	};
 
 	return (
-		<header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+		<header className="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center py-4">
-					<div className="text-2xl font-bold text-blue-600">
+					<div className="text-2xl font-bold text-blue-400">
 						{t("app.title")}
 					</div>
 
@@ -66,45 +66,45 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className={`cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.home")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("services")}
-							className={`cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.services")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("portfolio")}
-							className={`cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.portfolio")}
 						</button>
 						<Link
 							to="/about"
-							className={`cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.about")}
 						</Link>
 						<Link
 							to="/faq"
-							className={`cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.faq")}
 						</Link>
 						<Link
 							to="/process"
-							className={`cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.process")}
 						</Link>
 						<Link
 							to="/contact"
-							className={`cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.contact")}
 						</Link>
@@ -120,7 +120,7 @@ export function Header() {
 					{/* Mobile Menu Button */}
 					<button
 						type="button"
-						className="md:hidden cursor-pointer"
+						className="md:hidden cursor-pointer text-gray-300"
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
 					>
 						{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -133,53 +133,53 @@ export function Header() {
 						<button
 							type="button"
 							onClick={() => scrollToSection("home")}
-							className={`text-left cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.home")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("services")}
-							className={`text-left cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${activeSection === "services" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.services")}
 						</button>
 						<button
 							type="button"
 							onClick={() => scrollToSection("portfolio")}
-							className={`text-left cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${activeSection === "portfolio" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.portfolio")}
 						</button>
 						<Link
 							to="/about"
 							onClick={() => setIsMenuOpen(false)}
-							className={`text-left cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/about" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.about")}
 						</Link>
 						<Link
 							to="/faq"
 							onClick={() => setIsMenuOpen(false)}
-							className={`text-left cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/faq" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.faq")}
 						</Link>
 						<Link
 							to="/process"
 							onClick={() => setIsMenuOpen(false)}
-							className={`text-left cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/process" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.process")}
 						</Link>
 						<Link
 							to="/contact"
 							onClick={() => setIsMenuOpen(false)}
-							className={`text-left cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "hover:text-blue-600"}`}
+							className={`text-left cursor-pointer transition-colors ${location.pathname === "/contact" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.contact")}
 						</Link>
-						<div className="pt-2 border-t">
+						<div className="pt-2 border-t border-gray-700">
 							<LanguageSwitcher />
 						</div>
 						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>

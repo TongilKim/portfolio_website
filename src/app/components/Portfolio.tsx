@@ -28,11 +28,11 @@ export function Portfolio() {
 	}) as ProjectItem[];
 
 	return (
-		<section id="portfolio" className="py-20 bg-gray-50">
+		<section id="portfolio" className="py-20 bg-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4">{t("portfolio.title")}</h2>
-					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("portfolio.title")}</h2>
+					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("portfolio.description")}
 					</p>
 				</div>
@@ -41,7 +41,7 @@ export function Portfolio() {
 					{projects.map((project, index) => (
 						<Card
 							key={project.title}
-							className="group overflow-hidden hover:shadow-xl transition-shadow"
+							className="group overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-shadow bg-gray-900 border-gray-700"
 						>
 							<div className="relative overflow-hidden">
 								<ImageWithFallback
@@ -54,11 +54,11 @@ export function Portfolio() {
 								</div>
 							</div>
 							<CardContent className="p-6">
-								<h3 className="text-xl font-bold mb-2">{project.title}</h3>
-								<p className="text-gray-600 mb-4">{project.description}</p>
+								<h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+								<p className="text-gray-300 mb-4">{project.description}</p>
 								<div className="flex flex-wrap gap-2">
 									{projectTags[index]?.map((tag) => (
-										<Badge key={tag} variant="secondary">
+										<Badge key={tag} variant="secondary" className="bg-gray-700 text-gray-200 hover:bg-gray-600">
 											{tag}
 										</Badge>
 									))}

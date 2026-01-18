@@ -31,11 +31,11 @@ export function Services() {
 	}) as ServiceItem[];
 
 	return (
-		<section id="services" className="py-20 bg-white">
+		<section id="services" className="py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4">{t("services.title")}</h2>
-					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("services.title")}</h2>
+					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("services.description")}
 					</p>
 				</div>
@@ -46,28 +46,28 @@ export function Services() {
 						return (
 							<Card
 								key={service.title}
-								className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group h-full flex flex-col"
+								className="border-2 border-gray-700 hover:border-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/10 group h-full flex flex-col bg-gray-800"
 							>
 								<CardHeader>
-									<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
+									<div className="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
 										<Icon
-											className="text-blue-600 group-hover:text-white transition-colors"
+											className="text-blue-400 group-hover:text-white transition-colors"
 											size={24}
 										/>
 									</div>
-									<CardTitle className="text-xl">{service.title}</CardTitle>
+									<CardTitle className="text-xl text-white">{service.title}</CardTitle>
 								</CardHeader>
 								<CardContent className="flex-1 flex flex-col">
-									<CardDescription className="text-base flex-1">
+									<CardDescription className="text-base flex-1 text-gray-300">
 										{service.description}
 									</CardDescription>
-									<p className="text-sm text-blue-600 font-medium mt-4">
+									<p className="text-sm text-blue-400 font-medium mt-4">
 										{t("services.idealForLabel")}: {service.idealFor}
 									</p>
 									<Link to="/contact" className="w-full block">
 										<Button
 											variant="outline"
-											className="w-full mt-4 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
+											className="w-full mt-4 border-gray-600 text-gray-300 hover:bg-blue-500 hover:text-white hover:border-blue-500 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
 										>
 											{t("services.cta.card")}
 											<ArrowRight size={16} className="ml-2" />
@@ -80,7 +80,7 @@ export function Services() {
 				</div>
 
 				{/* Section CTA */}
-				<div className="mt-16 text-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 md:p-12">
+				<div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 border border-blue-500/30">
 					<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
 						{t("services.cta.section")}
 					</h3>
@@ -90,7 +90,7 @@ export function Services() {
 					<Link to="/contact">
 						<Button
 							size="lg"
-							className="bg-white text-blue-600 hover:bg-blue-50"
+							className="bg-white text-blue-600 hover:bg-gray-100"
 						>
 							{t("services.cta.button")}
 							<ArrowRight size={18} className="ml-2" />

@@ -30,14 +30,14 @@ export function ViewportFadeOverlay() {
 			<div
 				className="fixed top-0 left-0 right-0 h-48 pointer-events-none z-40"
 				style={{
-					background: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+					background: "linear-gradient(to bottom, rgba(17,24,39,1) 0%, rgba(17,24,39,0) 100%)",
 				}}
 			/>
 			{/* Bottom fade overlay - hidden when at bottom of page */}
 			<div
 				className="fixed bottom-0 left-0 right-0 h-48 pointer-events-none z-40 transition-opacity duration-300"
 				style={{
-					background: "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)",
+					background: "linear-gradient(to top, rgba(17,24,39,1) 0%, rgba(17,24,39,0) 100%)",
 					opacity: isAtBottom ? 0 : 1,
 				}}
 			/>

@@ -17,22 +17,22 @@ export function Hero() {
 	return (
 		<section
 			id="home"
-			className="pt-20 min-h-screen flex items-center bg-gradient-to-b from-blue-50 to-white"
+			className="pt-20 min-h-screen flex items-center bg-gradient-to-b from-gray-800 to-gray-900"
 		>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div className="space-y-8">
-						<div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full">
+						<div className="inline-flex items-center gap-2 bg-blue-900/50 text-blue-300 px-4 py-2 rounded-full border border-blue-700/50">
 							<Sparkles size={16} />
 							<span className="text-sm">{t("hero.badge")}</span>
 						</div>
 
-						<h1 className="text-5xl md:text-6xl lg:text-7xl">
+						<h1 className="text-5xl md:text-6xl lg:text-7xl text-white">
 							{t("hero.title")}{" "}
-							<span className="text-blue-600">{t("hero.titleHighlight")}</span>
+							<span className="text-blue-400">{t("hero.titleHighlight")}</span>
 						</h1>
 
-						<p className="text-xl text-gray-600">{t("hero.description")}</p>
+						<p className="text-xl text-gray-300">{t("hero.description")}</p>
 
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Link to="/contact">
@@ -52,28 +52,28 @@ export function Hero() {
 							</Button>
 						</div>
 
-						<div className="grid grid-cols-3 gap-8 pt-8 border-t">
+						<div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-700">
 							<div>
-								<div className="text-3xl font-bold text-blue-600">
+								<div className="text-3xl font-bold text-blue-400">
 									{t("hero.stats.projects")}
 								</div>
-								<div className="text-sm text-gray-600">
+								<div className="text-sm text-gray-400">
 									{t("hero.stats.projectsLabel")}
 								</div>
 							</div>
 							<div>
-								<div className="text-3xl font-bold text-blue-600">
+								<div className="text-3xl font-bold text-blue-400">
 									{t("hero.stats.satisfaction")}
 								</div>
-								<div className="text-sm text-gray-600">
+								<div className="text-sm text-gray-400">
 									{t("hero.stats.satisfactionLabel")}
 								</div>
 							</div>
 							<div>
-								<div className="text-3xl font-bold text-blue-600">
+								<div className="text-3xl font-bold text-blue-400">
 									{t("hero.stats.experience")}
 								</div>
-								<div className="text-sm text-gray-600">
+								<div className="text-sm text-gray-400">
 									{t("hero.stats.experienceLabel")}
 								</div>
 							</div>
@@ -81,7 +81,7 @@ export function Hero() {
 					</div>
 
 					<div className="relative">
-						<div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20"></div>
+						<div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-30"></div>
 						<ImageWithFallback
 							eager
 							src="https://images.unsplash.com/photo-1622131815526-eaae1e615381?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBsYXB0b3B8ZW58MXx8fHwxNzY3ODI5MTMyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
