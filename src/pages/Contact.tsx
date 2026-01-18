@@ -21,7 +21,7 @@ import { Textarea } from "@/app/components/ui/textarea";
 
 export function ContactPage() {
 	const { t, i18n } = useTranslation();
-	const isKorean = i18n.language === "ko";
+	const isKorean = i18n.language.startsWith("ko");
 
 	const [formValues, setFormValues] = useState({
 		name: "",

@@ -5,7 +5,7 @@ const KAKAO_OPEN_CHAT_URL = "https://open.kakao.com/o/sL7Kr6bi";
 export function KakaoChatFloatingButton() {
 	const { t, i18n } = useTranslation();
 
-	if (i18n.language !== "ko") {
+	if (!i18n.language.startsWith("ko")) {
 		return null;
 	}
 

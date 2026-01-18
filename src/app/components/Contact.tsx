@@ -21,7 +21,7 @@ import { Textarea } from "./ui/textarea";
 
 export function Contact() {
 	const { t, i18n } = useTranslation();
-	const isKorean = i18n.language === "ko";
+	const isKorean = i18n.language.startsWith("ko");
 
 	// Track form values for button disable state
 	const [formValues, setFormValues] = useState({
