@@ -257,6 +257,17 @@
 	"faq": {
 		"title": "자주 묻는 질문",
 		"description": "프로젝트 진행 전 알아두시면 좋은 것들",
+		"process": {
+			"title": "개발 프로세스",
+			"steps": [
+				{ "icon": "MessageSquare", "title": "상담", "description": "요구사항 파악" },
+				{ "icon": "FileText", "title": "견적", "description": "범위 및 비용 산정" },
+				{ "icon": "FileCheck", "title": "계약", "description": "일정 및 조건 확정" },
+				{ "icon": "Code", "title": "개발", "description": "주간 데모 공유" },
+				{ "icon": "CheckCircle", "title": "검수", "description": "피드백 반영" },
+				{ "icon": "Rocket", "title": "런칭", "description": "배포 및 인수인계" }
+			]
+		},
 		"sections": [
 			{
 				"title": "프로젝트 준비",

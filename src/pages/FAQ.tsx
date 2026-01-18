@@ -1,6 +1,30 @@
-import { ChevronDown } from "lucide-react";
+import {
+	ChevronDown,
+	MessageSquare,
+	FileText,
+	FileCheck,
+	Code,
+	CheckCircle,
+	Rocket,
+	type LucideIcon,
+} from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
+const iconMap: Record<string, LucideIcon> = {
+	MessageSquare,
+	FileText,
+	FileCheck,
+	Code,
+	CheckCircle,
+	Rocket,
+};
+
+interface ProcessStep {
+	icon: string;
+	title: string;
+	description: string;
+}
 
 interface FAQItem {
 	question: string;
@@ -39,13 +63,66 @@ function AccordionItem({ question, answer }: FAQItem) {
 	);
 }
 
+function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
+	return (
+		<div className="relative">
+			{/* Desktop: Horizontal timeline */}
+			<div className="hidden md:block">
+				{/* Connecting line */}
+				<div className="absolute top-8 left-0 right-0 h-0.5 bg-blue-200" />
+				<div className="flex justify-between relative">
+					{steps.map((step, index) => {
+						const Icon = iconMap[step.icon] || CheckCircle;
+						return (
+							<div key={step.title} className="flex flex-col items-center text-center w-28">
+								<div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mb-3 relative z-10 shadow-lg">
+									<Icon className="w-7 h-7 text-white" />
+								</div>
+								<h4 className="font-semibold text-gray-900 mb-1">{step.title}</h4>
+								<p className="text-xs text-gray-500">{step.description}</p>
+								{index < steps.length - 1 && (
+									<div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5" />
+								)}
+							</div>
+						);
+					})}
+				</div>
+			</div>
+
+			{/* Mobile: Vertical timeline */}
+			<div className="md:hidden space-y-4">
+				{steps.map((step, index) => {
+					const Icon = iconMap[step.icon] || CheckCircle;
+					return (
+						<div key={step.title} className="flex items-start gap-4">
+							<div className="relative">
+								<div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+									<Icon className="w-5 h-5 text-white" />
+								</div>
+								{index < steps.length - 1 && (
+									<div className="absolute top-12 left-1/2 w-0.5 h-8 bg-blue-200 -translate-x-1/2" />
+								)}
+							</div>
+							<div className="pt-2">
+								<h4 className="font-semibold text-gray-900">{step.title}</h4>
+								<p className="text-sm text-gray-500">{step.description}</p>
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	);
+}
+
 export function FAQ() {
 	const { t } = useTranslation();
 	const sections = t("faq.sections", { returnObjects: true }) as FAQSection[];
+	const processSteps = t("faq.process.steps", { returnObjects: true }) as ProcessStep[];
 
 	return (
 		<main className="py-20 bg-white">
-			<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4">
 						{t("faq.title")}
@@ -53,7 +130,17 @@ export function FAQ() {
 					<p className="text-xl text-gray-600">{t("faq.description")}</p>
 				</div>
 
-				<div className="space-y-12">
+				{/* Process Timeline */}
+				<div className="mb-16">
+					<h2 className="text-2xl font-semibold mb-8 text-center text-blue-600">
+						{t("faq.process.title")}
+					</h2>
+					<div className="bg-gray-50 rounded-2xl p-8">
+						<ProcessTimeline steps={processSteps} />
+					</div>
+				</div>
+
+				<div className="space-y-12 max-w-3xl mx-auto">
 					{sections.map((section) => (
 						<div key={section.title}>
 							<h2 className="text-2xl font-semibold mb-6 text-blue-600">

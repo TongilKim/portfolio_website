@@ -257,6 +257,17 @@
 	"faq": {
 		"title": "Frequently Asked Questions",
 		"description": "What you need to know before starting a project",
+		"process": {
+			"title": "Development Process",
+			"steps": [
+				{ "icon": "MessageSquare", "title": "Consult", "description": "Understand requirements" },
+				{ "icon": "FileText", "title": "Quote", "description": "Scope & cost estimate" },
+				{ "icon": "FileCheck", "title": "Contract", "description": "Timeline & terms" },
+				{ "icon": "Code", "title": "Develop", "description": "Weekly demos" },
+				{ "icon": "CheckCircle", "title": "Review", "description": "Feedback & revisions" },
+				{ "icon": "Rocket", "title": "Launch", "description": "Deploy & handoff" }
+			]
+		},
 		"sections": [
 			{
 				"title": "Project Preparation",
