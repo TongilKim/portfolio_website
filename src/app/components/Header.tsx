@@ -1,17 +1,31 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LanguageSelector, InlineLanguageSelector } from "./LanguageSelector";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "./ui/button";
 
-export function Header() {
+interface HeaderProps {
+	onLogoClick?: () => void;
+}
+
+export function Header({ onLogoClick }: HeaderProps) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("home");
 	const { t } = useTranslation();
 	const location = useLocation();
+	const navigate = useNavigate();
 	const isHomePage = location.pathname === "/";
+
+	const handleLogoClick = () => {
+		onLogoClick?.();
+		if (!isHomePage) {
+			navigate("/");
+		} else {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		}
+	};
 
 	useEffect(() => {
 		if (!isHomePage) {
@@ -58,15 +72,19 @@ export function Header() {
 		<header className="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center py-4">
-					<div className="text-2xl font-bold text-blue-400">
+					<button
+						type="button"
+						onClick={handleLogoClick}
+						className="text-2xl font-bold text-blue-400 cursor-pointer hover:text-blue-300 transition-colors"
+					>
 						{t("app.title")}
-					</div>
+					</button>
 
 					{/* Desktop Navigation */}
 					<nav className="hidden md:flex gap-8">
 						<button
 							type="button"
-							onClick={() => scrollToSection("home")}
+							onClick={handleLogoClick}
 							className={`cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.home")}
@@ -133,7 +151,10 @@ export function Header() {
 					<nav className="md:hidden pb-4 flex flex-col gap-4">
 						<button
 							type="button"
-							onClick={() => scrollToSection("home")}
+							onClick={() => {
+								handleLogoClick();
+								setIsMenuOpen(false);
+							}}
 							className={`text-left cursor-pointer transition-colors ${activeSection === "home" ? "text-blue-400 font-medium" : "text-gray-300 hover:text-blue-400"}`}
 						>
 							{t("nav.home")}
@@ -181,7 +202,7 @@ export function Header() {
 							{t("nav.contact")}
 						</Link>
 						<div className="pt-2 border-t border-gray-700">
-							<InlineLanguageSelector />
+							<InlineLanguageSelector onLanguageChange={() => setIsMenuOpen(false)} />
 						</div>
 						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>
 							<Button type="button" className="w-full">

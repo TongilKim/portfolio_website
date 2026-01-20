@@ -1,6 +1,5 @@
 import { Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router-dom";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -8,7 +7,6 @@ import {
 	DropdownMenuTrigger,
 } from "@/app/components/ui/dropdown-menu";
 import { Button } from "@/app/components/ui/button";
-import { getLocalizedPath } from "./LanguageRouter";
 
 const languages = [
 	{ code: "en", name: "English", nativeName: "English", flag: "🇺🇸" },
@@ -17,20 +15,11 @@ const languages = [
 
 export function LanguageSelector() {
 	const { i18n } = useTranslation();
-	const location = useLocation();
-	const navigate = useNavigate();
 
 	const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
 
 	const handleLanguageChange = (langCode: string) => {
-		// Change the language
 		i18n.changeLanguage(langCode);
-
-		// Update the URL to reflect the new language
-		const newPath = getLocalizedPath(location.pathname, langCode);
-		navigate(newPath);
-
-		// Store preference in localStorage
 		localStorage.setItem("preferredLanguage", langCode);
 	};
 
@@ -56,7 +45,7 @@ export function LanguageSelector() {
 						key={lang.code}
 						onClick={() => handleLanguageChange(lang.code)}
 						className={`cursor-pointer ${
-							lang.code === i18n.language ? "bg-blue-50 dark:bg-blue-950" : ""
+							lang.code === i18n.language ? "bg-blue-900/50" : ""
 						}`}
 					>
 						<span className="mr-2">{lang.flag}</span>
@@ -72,16 +61,17 @@ export function LanguageSelector() {
 }
 
 // Inline language switcher for mobile menu
-export function InlineLanguageSelector() {
+interface InlineLanguageSelectorProps {
+	onLanguageChange?: () => void;
+}
+
+export function InlineLanguageSelector({ onLanguageChange }: InlineLanguageSelectorProps) {
 	const { i18n } = useTranslation();
-	const location = useLocation();
-	const navigate = useNavigate();
 
 	const handleLanguageChange = (langCode: string) => {
 		i18n.changeLanguage(langCode);
-		const newPath = getLocalizedPath(location.pathname, langCode);
-		navigate(newPath);
 		localStorage.setItem("preferredLanguage", langCode);
+		onLanguageChange?.();
 	};
 
 	return (

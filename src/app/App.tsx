@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutPage } from "../pages/About";
 import { ContactPage } from "../pages/Contact";
@@ -12,14 +13,18 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { ViewportFadeOverlay } from "./components/ViewportFadeOverlay";
 
 export default function App() {
+	const [showIntro, setShowIntro] = useState(true);
+
+	const skipIntro = () => setShowIntro(false);
+
 	return (
 		<BrowserRouter>
 			<ScrollToTop />
 			<div className="min-h-screen">
-				<Header />
+				<Header onLogoClick={skipIntro} />
 				<ViewportFadeOverlay />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Home showIntro={showIntro} onIntroComplete={() => setShowIntro(false)} />} />
 					<Route path="/faq" element={<FAQ />} />
 					<Route path="/process" element={<Process />} />
 					<Route path="/about" element={<AboutPage />} />
@@ -27,7 +32,7 @@ export default function App() {
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 				<Footer />
-				<KakaoChatFloatingButton />
+				{!showIntro && <KakaoChatFloatingButton />}
 			</div>
 		</BrowserRouter>
 	);

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { About } from "../app/components/About";
 import { Contact } from "../app/components/Contact";
@@ -8,8 +7,12 @@ import { Portfolio } from "../app/components/Portfolio";
 import { SEO } from "../app/components/SEO";
 import { Services } from "../app/components/Services";
 
-export function Home() {
-	const [showIntro, setShowIntro] = useState(true);
+interface HomeProps {
+	showIntro: boolean;
+	onIntroComplete: () => void;
+}
+
+export function Home({ showIntro, onIntroComplete }: HomeProps) {
 	const { i18n } = useTranslation();
 	const isKorean = i18n.language === "ko";
 
@@ -22,7 +25,7 @@ export function Home() {
 					: "PixelFlow - Freelance web developer delivering innovative web solutions. Specializing in React, TypeScript, and modern web technologies."}
 				url="/"
 			/>
-			{showIntro && <IntroAnimation onComplete={() => setShowIntro(false)} />}
+			{showIntro && <IntroAnimation onComplete={onIntroComplete} />}
 			<Hero />
 			<Services />
 			<Portfolio />
