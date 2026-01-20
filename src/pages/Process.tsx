@@ -1,5 +1,7 @@
 import { Code, Palette, Rocket, Search } from "lucide-react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { AnimatedSection, StaggerContainer, staggerItemVariants } from "@/app/components/AnimatedSection";
 import { SEO } from "@/app/components/SEO";
 
 interface ProcessPhase {
@@ -25,22 +27,22 @@ export function Process() {
 				url="/process"
 			/>
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
 						{t("process.title")}
 					</h1>
 					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("process.description")}
 					</p>
-				</div>
+				</AnimatedSection>
 
-				<div className="space-y-12">
+				<StaggerContainer className="space-y-12">
 					{phases.map((phase, index) => {
 						const Icon = icons[index] || Code;
 						const stepNumber = index + 1;
 
 						return (
-							<div key={phase.title} className="relative">
+							<motion.div key={phase.title} variants={staggerItemVariants} className="relative">
 								{/* Connector line */}
 								{index < phases.length - 1 && (
 									<div className="absolute left-6 top-16 w-0.5 h-[calc(100%+1rem)] bg-blue-700 hidden md:block" />
@@ -71,13 +73,13 @@ export function Process() {
 										</div>
 									</div>
 								</div>
-							</div>
+							</motion.div>
 						);
 					})}
-				</div>
+				</StaggerContainer>
 
 				{/* Timeline summary */}
-				<div className="mt-16 bg-gray-800 rounded-2xl p-8 border border-gray-700">
+				<AnimatedSection className="mt-16 bg-gray-800 rounded-2xl p-8 border border-gray-700" delay={0.2}>
 					<h3 className="text-xl font-bold mb-4 text-center text-white">
 						{t("process.timeline.title")}
 					</h3>
@@ -96,10 +98,10 @@ export function Process() {
 							</div>
 						))}
 					</div>
-				</div>
+				</AnimatedSection>
 
 				{/* CTA */}
-				<div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 border border-blue-500/30">
+				<AnimatedSection className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 border border-blue-500/30" delay={0.3}>
 					<h3 className="text-2xl font-bold text-white mb-4">
 						{t("process.cta.title")}
 					</h3>
@@ -110,7 +112,7 @@ export function Process() {
 					>
 						{t("process.cta.button")}
 					</a>
-				</div>
+				</AnimatedSection>
 			</div>
 		</main>
 	);

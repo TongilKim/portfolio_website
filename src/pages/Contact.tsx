@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import { AnimatedSection } from "@/app/components/AnimatedSection";
 import { FORMSPREE_FORM_ID } from "@/config/formspree";
 import {
 	type ContactFormData,
@@ -82,17 +83,17 @@ export function ContactPage() {
 				url="/contact"
 			/>
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
 						{t("contact.title")}
 					</h1>
 					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("contact.description")}
 					</p>
-				</div>
+				</AnimatedSection>
 
 				<div className="grid md:grid-cols-2 gap-12">
-					<div className="space-y-8">
+					<AnimatedSection className="space-y-8" delay={0.1} direction="left">
 						<div>
 							<h2 className="text-2xl font-bold mb-6 text-white">
 								{t("contact.getInTouch.title")}
@@ -126,8 +127,9 @@ export function ContactPage() {
 								</a>
 							</div>
 						)}
-					</div>
+					</AnimatedSection>
 
+					<AnimatedSection delay={0.2} direction="right">
 					<Card className="bg-gray-800 border-gray-700">
 						<CardContent className="p-6">
 							<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -259,6 +261,7 @@ export function ContactPage() {
 							</form>
 						</CardContent>
 					</Card>
+					</AnimatedSection>
 				</div>
 			</div>
 		</main>

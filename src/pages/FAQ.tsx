@@ -8,8 +8,10 @@ import {
 	Rocket,
 	type LucideIcon,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { AnimatedSection, StaggerContainer, staggerItemVariants } from "@/app/components/AnimatedSection";
 import { SEO } from "@/app/components/SEO";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -132,26 +134,26 @@ export function FAQ() {
 				url="/faq"
 			/>
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
 						{t("faq.title")}
 					</h1>
 					<p className="text-xl text-gray-300">{t("faq.description")}</p>
-				</div>
+				</AnimatedSection>
 
 				{/* Process Timeline */}
-				<div className="mb-16">
+				<AnimatedSection className="mb-16" delay={0.1}>
 					<h2 className="text-2xl font-semibold mb-8 text-center text-blue-400">
 						{t("faq.process.title")}
 					</h2>
 					<div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
 						<ProcessTimeline steps={processSteps} />
 					</div>
-				</div>
+				</AnimatedSection>
 
-				<div className="space-y-12 max-w-3xl mx-auto">
+				<StaggerContainer className="space-y-12 max-w-3xl mx-auto">
 					{sections.map((section) => (
-						<div key={section.title}>
+						<motion.div key={section.title} variants={staggerItemVariants}>
 							<h2 className="text-2xl font-semibold mb-6 text-blue-400">
 								{section.title}
 							</h2>
@@ -164,11 +166,11 @@ export function FAQ() {
 									/>
 								))}
 							</div>
-						</div>
+						</motion.div>
 					))}
-				</div>
+				</StaggerContainer>
 
-				<div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 border border-blue-500/30">
+				<AnimatedSection className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 border border-blue-500/30" delay={0.3}>
 					<h3 className="text-2xl font-bold text-white mb-4">
 						{t("faq.cta.title")}
 					</h3>
@@ -179,7 +181,7 @@ export function FAQ() {
 					>
 						{t("faq.cta.button")}
 					</a>
-				</div>
+				</AnimatedSection>
 			</div>
 		</main>
 	);
