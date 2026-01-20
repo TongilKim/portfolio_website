@@ -1,9 +1,13 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
+import { detectUserLanguage } from "./lib/languageDetection";
 
 import enTranslation from "./locales/en/translation.json";
 import koTranslation from "./locales/ko/translation.json";
+
+// Get initial language
+const initialLanguage = detectUserLanguage();
 
 i18n
 	.use(LanguageDetector)
@@ -13,16 +17,21 @@ i18n
 			en: { translation: enTranslation },
 			ko: { translation: koTranslation },
 		},
-		fallbackLng: "ko",
+		lng: initialLanguage, // Set initial language
+		fallbackLng: "en",
 		debug: import.meta.env.DEV,
 		interpolation: {
 			escapeValue: false, // React already escapes
 		},
 		detection: {
-			order: ["localStorage", "navigator"],
+			order: ["path", "localStorage", "navigator", "htmlTag"],
 			caches: ["localStorage"],
-			lookupLocalStorage: "i18nextLng",
+			lookupLocalStorage: "preferredLanguage",
+			lookupFromPathIndex: 0,
+			checkWhitelist: true,
 		},
+		supportedLngs: ["ko", "en"],
+		load: "languageOnly", // ignore region codes
 	});
 
 export default i18n;

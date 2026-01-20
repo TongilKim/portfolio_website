@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
 	ArrowRight,
 	Briefcase,
@@ -7,6 +8,11 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import {
+	AnimatedSection,
+	StaggerContainer,
+	staggerItemVariants,
+} from "./AnimatedSection";
 import { Button } from "./ui/button";
 import {
 	Card,
@@ -33,54 +39,53 @@ export function Services() {
 	return (
 		<section id="services" className="py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("services.title")}</h2>
 					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("services.description")}
 					</p>
-				</div>
+				</AnimatedSection>
 
-				<div className="grid md:grid-cols-2 gap-8">
+				<StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
 					{services.map((service, index) => {
 						const Icon = iconMap[index] || Code;
 						return (
-							<Card
-								key={service.title}
-								className="border-2 border-gray-700 hover:border-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/10 group h-full flex flex-col bg-gray-800"
-							>
-								<CardHeader>
-									<div className="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
-										<Icon
-											className="text-blue-400 group-hover:text-white transition-colors"
-											size={24}
-										/>
-									</div>
-									<CardTitle className="text-xl text-white">{service.title}</CardTitle>
-								</CardHeader>
-								<CardContent className="flex-1 flex flex-col">
-									<CardDescription className="text-base flex-1 text-gray-300">
-										{service.description}
-									</CardDescription>
-									<p className="text-sm text-blue-400 font-medium mt-4">
-										{t("services.idealForLabel")}: {service.idealFor}
-									</p>
-									<Link to="/contact" className="w-full block">
-										<Button
-											variant="outline"
-											className="w-full mt-4 border-gray-600 text-gray-300 hover:bg-blue-500 hover:text-white hover:border-blue-500 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
-										>
-											{t("services.cta.card")}
-											<ArrowRight size={16} className="ml-2" />
-										</Button>
-									</Link>
-								</CardContent>
-							</Card>
+							<motion.div key={service.title} variants={staggerItemVariants}>
+								<Card className="border-2 border-gray-700 hover:border-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/10 group h-full flex flex-col bg-gray-800">
+									<CardHeader>
+										<div className="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
+											<Icon
+												className="text-blue-400 group-hover:text-white transition-colors"
+												size={24}
+											/>
+										</div>
+										<CardTitle className="text-xl text-white">{service.title}</CardTitle>
+									</CardHeader>
+									<CardContent className="flex-1 flex flex-col">
+										<CardDescription className="text-base flex-1 text-gray-300">
+											{service.description}
+										</CardDescription>
+										<p className="text-sm text-blue-400 font-medium mt-4">
+											{t("services.idealForLabel")}: {service.idealFor}
+										</p>
+										<Link to="/contact" className="w-full block">
+											<Button
+												variant="outline"
+												className="w-full mt-4 border-gray-600 text-gray-300 hover:bg-blue-500 hover:text-white hover:border-blue-500 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors"
+											>
+												{t("services.cta.card")}
+												<ArrowRight size={16} className="ml-2" />
+											</Button>
+										</Link>
+									</CardContent>
+								</Card>
+							</motion.div>
 						);
 					})}
-				</div>
+				</StaggerContainer>
 
 				{/* Section CTA */}
-				<div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 border border-blue-500/30">
+				<AnimatedSection delay={0.3} className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 border border-blue-500/30">
 					<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
 						{t("services.cta.section")}
 					</h3>
@@ -96,7 +101,7 @@ export function Services() {
 							<ArrowRight size={18} className="ml-2" />
 						</Button>
 					</Link>
-				</div>
+				</AnimatedSection>
 			</div>
 		</section>
 	);

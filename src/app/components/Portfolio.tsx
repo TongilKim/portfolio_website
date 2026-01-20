@@ -1,5 +1,11 @@
+import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+	AnimatedSection,
+	StaggerContainer,
+	staggerItemVariants,
+} from "./AnimatedSection";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
@@ -30,43 +36,42 @@ export function Portfolio() {
 	return (
 		<section id="portfolio" className="py-20 bg-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("portfolio.title")}</h2>
 					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("portfolio.description")}
 					</p>
-				</div>
+				</AnimatedSection>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
 					{projects.map((project, index) => (
-						<Card
-							key={project.title}
-							className="group overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-shadow bg-gray-900 border-gray-700"
-						>
-							<div className="relative overflow-hidden">
-								<ImageWithFallback
-									src={projectImages[index]}
-									alt={project.title}
-									className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-								/>
-								<div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center">
-									<ExternalLink className="text-white" size={32} />
+						<motion.div key={project.title} variants={staggerItemVariants}>
+							<Card className="group overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-shadow bg-gray-900 border-gray-700 h-full">
+								<div className="relative overflow-hidden">
+									<ImageWithFallback
+										src={projectImages[index]}
+										alt={project.title}
+										className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+									/>
+									<div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center">
+										<ExternalLink className="text-white" size={32} />
+									</div>
 								</div>
-							</div>
-							<CardContent className="p-6">
-								<h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-								<p className="text-gray-300 mb-4">{project.description}</p>
-								<div className="flex flex-wrap gap-2">
-									{projectTags[index]?.map((tag) => (
-										<Badge key={tag} variant="secondary" className="bg-gray-700 text-gray-200 hover:bg-gray-600">
-											{tag}
-										</Badge>
-									))}
-								</div>
-							</CardContent>
-						</Card>
+								<CardContent className="p-6">
+									<h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+									<p className="text-gray-300 mb-4">{project.description}</p>
+									<div className="flex flex-wrap gap-2">
+										{projectTags[index]?.map((tag) => (
+											<Badge key={tag} variant="secondary" className="bg-gray-700 text-gray-200 hover:bg-gray-600">
+												{tag}
+											</Badge>
+										))}
+									</div>
+								</CardContent>
+							</Card>
+						</motion.div>
 					))}
-				</div>
+				</StaggerContainer>
 			</div>
 		</section>
 	);

@@ -1,8 +1,10 @@
 import { Code, Heart, Lightbulb, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SEO } from "../app/components/SEO";
 
 export function AboutPage() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
+	const isKorean = i18n.language === "ko";
 	const skills = t("aboutPage.skills", { returnObjects: true }) as string[];
 	const values = t("aboutPage.values", { returnObjects: true }) as {
 		title: string;
@@ -13,6 +15,13 @@ export function AboutPage() {
 
 	return (
 		<main className="py-20 bg-gray-900">
+			<SEO
+				title={isKorean ? "소개" : "About"}
+				description={isKorean
+					? "PixelFlow 웹 개발자 소개 - 10년 이상의 경험을 가진 풀스택 개발자. React, Node.js, 클라우드 솔루션 전문."
+					: "About PixelFlow - Full-stack developer with 10+ years of experience. Specializing in React, Node.js, and cloud solutions."}
+				url="/about"
+			/>
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Hero section */}
 				<div className="text-center mb-16">

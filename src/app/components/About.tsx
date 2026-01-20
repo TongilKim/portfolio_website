@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { AnimatedSection } from "./AnimatedSection";
 
 export function About() {
 	const { t } = useTranslation();
@@ -11,7 +12,7 @@ export function About() {
 		<section id="about" className="py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
-					<div>
+					<AnimatedSection direction="left">
 						<h2 className="text-4xl md:text-5xl mb-6 text-white">{t("about.title")}</h2>
 						<div className="space-y-4 text-lg text-gray-300">
 							{paragraphs.map((paragraph) => (
@@ -25,9 +26,9 @@ export function About() {
 							{t("about.learnMore")}
 							<ArrowRight size={18} className="ml-2" />
 						</Link>
-					</div>
+					</AnimatedSection>
 
-					<div>
+					<AnimatedSection direction="right" delay={0.2}>
 						<h3 className="text-2xl font-bold mb-6 text-white">
 							{t("about.skillsTitle")}
 						</h3>
@@ -46,7 +47,7 @@ export function About() {
 						<div className="mt-8 p-6 bg-blue-900/30 rounded-lg border-l-4 border-blue-500">
 							<p className="text-lg italic text-gray-200">"{t("about.quote")}"</p>
 						</div>
-					</div>
+					</AnimatedSection>
 				</div>
 			</div>
 		</section>

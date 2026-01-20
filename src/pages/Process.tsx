@@ -1,5 +1,6 @@
 import { Code, Palette, Rocket, Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/app/components/SEO";
 
 interface ProcessPhase {
 	title: string;
@@ -10,11 +11,19 @@ interface ProcessPhase {
 const icons = [Search, Palette, Code, Rocket];
 
 export function Process() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
+	const isKorean = i18n.language === "ko";
 	const phases = t("process.phases", { returnObjects: true }) as ProcessPhase[];
 
 	return (
 		<main className="py-20 bg-gray-900">
+			<SEO
+				title={isKorean ? "프로세스" : "Process"}
+				description={isKorean
+					? "PixelFlow의 웹 개발 프로세스. 요구사항 분석부터 배포까지 체계적인 개발 절차."
+					: "PixelFlow's web development process. Systematic development procedure from requirements analysis to deployment."}
+				url="/process"
+			/>
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">

@@ -1,0 +1,61 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/"
+  to = "/ko"
+  status = 302
+  conditions = {Language = ["ko"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+
+# Legacy URL redirects
+[[redirects]]
+  from = "/about"
+  to = "/en/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faq"
+  to = "/en/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/process"
+  to = "/en/process"
+  status = 301
+  force = true
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

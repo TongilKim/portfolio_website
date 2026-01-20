@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/app/components/SEO";
 
 const iconMap: Record<string, LucideIcon> = {
 	MessageSquare,
@@ -116,12 +117,20 @@ function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
 }
 
 export function FAQ() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
+	const isKorean = i18n.language === "ko";
 	const sections = t("faq.sections", { returnObjects: true }) as FAQSection[];
 	const processSteps = t("faq.process.steps", { returnObjects: true }) as ProcessStep[];
 
 	return (
 		<main className="py-20 bg-gray-900">
+			<SEO
+				title={isKorean ? "자주 묻는 질문" : "FAQ"}
+				description={isKorean
+					? "PixelFlow 웹 개발 서비스에 대해 자주 묻는 질문과 답변. 프로세스, 가격, 기술 스택 등."
+					: "Frequently asked questions about PixelFlow web development services. Process, pricing, tech stack, and more."}
+				url="/faq"
+			/>
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">

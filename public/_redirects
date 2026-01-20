@@ -1,0 +1,13 @@
+# Language detection redirects
+/ /en 302 Language=en
+/ /ko 302 Language=ko
+/ /en 302
+
+# Legacy URL redirects to language-prefixed URLs
+/about /en/about 301!
+/contact /en/contact 301!
+/faq /en/faq 301!
+/process /en/process 301!
+
+# SPA fallback - must be last
+/* /index.html 200

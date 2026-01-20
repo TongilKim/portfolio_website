@@ -14,6 +14,7 @@ import {
 	type ContactFormData,
 	contactSchema,
 } from "@/lib/validations/contactSchema";
+import { AnimatedSection } from "./AnimatedSection";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Input } from "./ui/input";
@@ -75,15 +76,15 @@ export function Contact() {
 	return (
 		<section id="contact" className="py-20 bg-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<AnimatedSection className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("contact.title")}</h2>
 					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("contact.description")}
 					</p>
-				</div>
+				</AnimatedSection>
 
 				<div className="grid md:grid-cols-2 gap-12">
-					<div className="space-y-8">
+					<AnimatedSection direction="left" className="space-y-8">
 						<div>
 							<h3 className="text-2xl font-bold mb-6 text-white">
 								{t("contact.getInTouch.title")}
@@ -117,9 +118,10 @@ export function Contact() {
 								</a>
 							</div>
 						)}
-					</div>
+					</AnimatedSection>
 
-					<Card className="bg-gray-900 border-gray-700">
+					<AnimatedSection direction="right" delay={0.2}>
+						<Card className="bg-gray-900 border-gray-700">
 						<CardContent className="p-6">
 							<form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
 								<div>
@@ -250,6 +252,7 @@ export function Contact() {
 							</form>
 						</CardContent>
 					</Card>
+					</AnimatedSection>
 				</div>
 			</div>
 		</section>

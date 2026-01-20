@@ -3,6 +3,7 @@ import { AboutPage } from "../pages/About";
 import { ContactPage } from "../pages/Contact";
 import { FAQ } from "../pages/FAQ";
 import { Home } from "../pages/Home";
+import { NotFound } from "../pages/NotFound";
 import { Process } from "../pages/Process";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -23,6 +24,7 @@ export default function App() {
 					<Route path="/process" element={<Process />} />
 					<Route path="/about" element={<AboutPage />} />
 					<Route path="/contact" element={<ContactPage />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 				<Footer />
 				<KakaoChatFloatingButton />

@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
+import { LanguageSelector, InlineLanguageSelector } from "./LanguageSelector";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "./ui/button";
 
@@ -111,7 +112,7 @@ export function Header() {
 					</nav>
 
 					<div className="hidden md:flex items-center gap-4">
-						<LanguageSwitcher />
+						<LanguageSelector />
 						<Link to="/contact">
 							<Button type="button">{t("nav.getStarted")}</Button>
 						</Link>
@@ -180,7 +181,7 @@ export function Header() {
 							{t("nav.contact")}
 						</Link>
 						<div className="pt-2 border-t border-gray-700">
-							<LanguageSwitcher />
+							<InlineLanguageSelector />
 						</div>
 						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>
 							<Button type="button" className="w-full">

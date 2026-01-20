@@ -1,0 +1,77 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "ko.*"
+        }
+      ],
+      "permanent": false,
+      "destination": "/ko"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "en.*"
+        }
+      ],
+      "permanent": false,
+      "destination": "/en"
+    },
+    {
+      "source": "/about",
+      "permanent": true,
+      "destination": "/en/about"
+    },
+    {
+      "source": "/contact",
+      "permanent": true,
+      "destination": "/en/contact"
+    },
+    {
+      "source": "/faq",
+      "permanent": true,
+      "destination": "/en/faq"
+    },
+    {
+      "source": "/process",
+      "permanent": true,
+      "destination": "/en/process"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
