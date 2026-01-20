@@ -20,7 +20,7 @@ export default function App() {
 	return (
 		<BrowserRouter>
 			<ScrollToTop />
-			<div className="min-h-screen">
+			<div className="min-h-screen overflow-x-hidden">
 				<Header onLogoClick={skipIntro} />
 				<ViewportFadeOverlay />
 				<Routes>
