@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Code2, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -55,15 +55,15 @@ export function Header({ onLogoClick }: HeaderProps) {
 	}, [isHomePage]);
 
 	const scrollToSection = (id: string) => {
+		setIsMenuOpen(false);
 		if (isHomePage) {
 			const element = document.getElementById(id);
 			if (element) {
 				element.scrollIntoView({ behavior: "smooth" });
-				setIsMenuOpen(false);
 			}
 		} else {
-			// Navigate to home with hash
-			window.location.href = `/#${id}`;
+			// Navigate to home with hash using React Router
+			navigate(`/#${id}`);
 		}
 	};
 
@@ -74,8 +74,9 @@ export function Header({ onLogoClick }: HeaderProps) {
 					<button
 						type="button"
 						onClick={handleLogoClick}
-						className="text-2xl font-bold text-blue-400 cursor-pointer hover:text-blue-300 transition-colors"
+						className="flex items-center gap-2 text-2xl font-bold text-blue-400 cursor-pointer hover:text-blue-300 transition-colors"
 					>
+						<Code2 size={28} className="text-blue-400" />
 						{t("app.title")}
 					</button>
 

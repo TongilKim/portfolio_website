@@ -12,10 +12,18 @@ import { KakaoChatFloatingButton } from "./components/KakaoChatButton";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ViewportFadeOverlay } from "./components/ViewportFadeOverlay";
 
-export default function App() {
-	const [showIntro, setShowIntro] = useState(true);
+const INTRO_SHOWN_KEY = "pixelflow_intro_shown";
 
-	const skipIntro = () => setShowIntro(false);
+export default function App() {
+	const [showIntro, setShowIntro] = useState(() => {
+		// Only show intro if it hasn't been shown in this session
+		return !sessionStorage.getItem(INTRO_SHOWN_KEY);
+	});
+
+	const skipIntro = () => {
+		sessionStorage.setItem(INTRO_SHOWN_KEY, "true");
+		setShowIntro(false);
+	};
 
 	return (
 		<BrowserRouter>
@@ -24,7 +32,7 @@ export default function App() {
 				<Header onLogoClick={skipIntro} />
 				<ViewportFadeOverlay />
 				<Routes>
-					<Route path="/" element={<Home showIntro={showIntro} onIntroComplete={() => setShowIntro(false)} />} />
+					<Route path="/" element={<Home showIntro={showIntro} onIntroComplete={skipIntro} />} />
 					<Route path="/faq" element={<FAQ />} />
 					<Route path="/process" element={<Process />} />
 					<Route path="/about" element={<AboutPage />} />
