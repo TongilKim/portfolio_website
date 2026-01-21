@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { About } from "../app/components/About";
+import { CaseStudies } from "../app/components/CaseStudies";
 import { Contact } from "../app/components/Contact";
 import { Hero } from "../app/components/Hero";
 import { IntroAnimation } from "../app/components/IntroAnimation";
@@ -30,6 +31,7 @@ export function Home({ showIntro, onIntroComplete }: HomeProps) {
 			<Hero />
 			<Services />
 			<Portfolio />
+			<CaseStudies />
 			<Testimonials />
 			<About />
 			<Contact />

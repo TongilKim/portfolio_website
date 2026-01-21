@@ -72,6 +72,34 @@
 			}
 		]
 	},
+	"caseStudies": {
+		"title": "프로젝트 사례",
+		"description": "고객의 목표 달성을 돕는 과정을 자세히 살펴보세요",
+		"challengeLabel": "과제",
+		"solutionLabel": "해결책",
+		"resultsLabel": "성과",
+		"cta": "프로젝트 시작하기",
+		"items": [
+			{
+				"title": "패션 이커머스 리뉴얼",
+				"client": "패션 스타트업",
+				"challenge": "느린 로딩 속도와 불편한 모바일 경험으로 이탈률이 높은 기존 사이트 개선이 필요했습니다.",
+				"solution": "Next.js 기반 스토어를 구축하고, 이미지 최적화, 간편 결제, 모바일 우선 디자인을 적용했습니다.",
+				"results": ["로딩 40% 단축", "매출 35% 증가", "이탈률 60% 감소"],
+				"tags": ["Next.js", "Stripe", "Tailwind"],
+				"duration": "2주"
+			},
+			{
+				"title": "SaaS 대시보드 구현",
+				"client": "데이터 분석 회사",
+				"challenge": "50개 이상의 복잡한 Figma 화면을 실시간 데이터와 함께 픽셀 퍼펙트하게 구현해야 했습니다.",
+				"solution": "모듈화된 React 컴포넌트와 Chart.js 연동, WebSocket 기반 실시간 업데이트를 개발했습니다.",
+				"results": ["50+ 화면 구현", "실시간 데이터", "99.9% 가동률"],
+				"tags": ["React", "TypeScript", "Chart.js"],
+				"duration": "3주"
+			}
+		]
+	},
 	"testimonials": {
 		"title": "고객 후기",
 		"description": "함께 작업한 고객들의 이야기",

@@ -72,6 +72,34 @@
 			}
 		]
 	},
+	"caseStudies": {
+		"title": "Case Studies",
+		"description": "A closer look at how I help clients achieve their goals",
+		"challengeLabel": "Challenge",
+		"solutionLabel": "Solution",
+		"resultsLabel": "Results",
+		"cta": "Start Your Project",
+		"items": [
+			{
+				"title": "E-commerce Platform Redesign",
+				"client": "Fashion Startup",
+				"challenge": "Outdated site with slow load times and poor mobile experience causing high bounce rates.",
+				"solution": "Built a modern Next.js storefront with optimized images, streamlined checkout, and mobile-first design.",
+				"results": ["40% faster load", "35% more sales", "60% less bounce"],
+				"tags": ["Next.js", "Stripe", "Tailwind"],
+				"duration": "2 weeks"
+			},
+			{
+				"title": "SaaS Dashboard Implementation",
+				"client": "Analytics Company",
+				"challenge": "Complex Figma designs with 50+ screens needed pixel-perfect implementation with real-time data.",
+				"solution": "Developed modular React components with Chart.js integration and WebSocket for live updates.",
+				"results": ["50+ screens built", "Real-time data", "99.9% uptime"],
+				"tags": ["React", "TypeScript", "Chart.js"],
+				"duration": "3 weeks"
+			}
+		]
+	},
 	"testimonials": {
 		"title": "Client Reviews",
 		"description": "What clients say about working with me",
