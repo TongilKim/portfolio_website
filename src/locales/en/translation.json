@@ -72,6 +72,35 @@
 			}
 		]
 	},
+	"testimonials": {
+		"title": "Client Reviews",
+		"description": "What clients say about working with me",
+		"previous": "Previous testimonial",
+		"next": "Next testimonial",
+		"goTo": "Go to testimonial",
+		"items": {
+			"1": {
+				"name": "James K.",
+				"role": "Startup Founder",
+				"content": "Honestly, I was a bit nervous handing off our Figma files to someone new. But wow - the site looked exactly like our designs, down to the smallest details. Saved us so much time not having to go back and forth on revisions."
+			},
+			"2": {
+				"name": "Sarah L.",
+				"role": "Product Manager",
+				"content": "What I appreciated most was the communication. Weekly demos meant no surprises, and when we had last-minute changes, they were handled without drama. Our dashboard turned out better than we imagined."
+			},
+			"3": {
+				"name": "Michael H.",
+				"role": "Online Store Owner",
+				"content": "Our sales actually went up after the redesign - like noticeably up. The mobile site is super smooth now, which I think made a big difference. Customers aren't bouncing like they used to."
+			},
+			"4": {
+				"name": "Yuna C.",
+				"role": "Creative Director",
+				"content": "It's rare to find a developer who gets design. Most just make it 'work' but miss the feel of it. This was different - the little animations and transitions were spot on. Already planning our next project together."
+			}
+		}
+	},
 	"portfolio": {
 		"title": "Featured Projects",
 		"description": "A showcase of recent work demonstrating my expertise in web development",

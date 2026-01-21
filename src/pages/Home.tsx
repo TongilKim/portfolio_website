@@ -6,6 +6,7 @@ import { IntroAnimation } from "../app/components/IntroAnimation";
 import { Portfolio } from "../app/components/Portfolio";
 import { SEO } from "../app/components/SEO";
 import { Services } from "../app/components/Services";
+import { Testimonials } from "../app/components/Testimonials";
 
 interface HomeProps {
 	showIntro: boolean;
@@ -29,6 +30,7 @@ export function Home({ showIntro, onIntroComplete }: HomeProps) {
 			<Hero />
 			<Services />
 			<Portfolio />
+			<Testimonials />
 			<About />
 			<Contact />
 		</>
