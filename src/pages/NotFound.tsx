@@ -6,7 +6,7 @@ import { SEO } from "@/app/components/SEO";
 import { Button } from "@/app/components/ui/button";
 
 export function NotFound() {
-	const { t, i18n } = useTranslation();
+	const { i18n } = useTranslation();
 	const isKorean = i18n.language === "ko";
 
 	return (

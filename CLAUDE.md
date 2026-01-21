@@ -25,10 +25,9 @@ This is a React SPA for a freelance web development services website, generated 
 - Formspree for contact form submission
 
 **Key Patterns:**
-- **Dual design variants**: V1 components in `src/app/components/`, V2 variants in `src/app/components/v2/`
 - **Page routing + scroll navigation**: Router handles pages, Header has scroll-to-section for single-page sections
 - **Path alias**: `@` maps to `src/` (configured in vite.config.ts and tsconfig.json)
-- **cn() utility**: Use `cn()` from `src/lib/utils.ts` for conditional Tailwind classes
+- **cn() utility**: Use `cn()` from `src/app/components/ui/utils.ts` for conditional Tailwind classes
 
 **Directory Structure:**
 ```
@@ -37,8 +36,8 @@ src/
 │   ├── App.tsx              # Router configuration
 │   └── components/
 │       ├── Header.tsx       # Main nav with scroll-to-section
-│       ├── v2/              # V2 design variant components
-│       └── ui/              # shadcn/ui primitives
+│       ├── ContactForm.tsx  # Shared contact form component
+│       └── ui/              # shadcn/ui primitives (button, card, input, textarea, badge, dropdown-menu)
 ├── pages/                   # Route page components
 ├── styles/
 │   ├── theme.css            # CSS custom properties (OKLCH colors)
@@ -46,14 +45,13 @@ src/
 ├── locales/{en,ko}/         # Translation JSON files
 ├── i18n.ts                  # i18next setup
 └── lib/
-    ├── utils.ts             # cn() and utilities
     └── validations/         # Zod schemas
 ```
 
 **Localization:**
 - Use `useTranslation()` hook from react-i18next
 - Translation keys in `src/locales/{en,ko}/translation.json`
-- Language persisted to localStorage under `i18nextLng` key
+- Language persisted to localStorage under `preferredLanguage` key
 
 ## Project Context
 

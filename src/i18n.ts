@@ -28,7 +28,6 @@ i18n
 			caches: ["localStorage"],
 			lookupLocalStorage: "preferredLanguage",
 			lookupFromPathIndex: 0,
-			checkWhitelist: true,
 		},
 		supportedLngs: ["ko", "en"],
 		load: "languageOnly", // ignore region codes
