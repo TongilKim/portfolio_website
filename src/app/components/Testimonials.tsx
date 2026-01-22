@@ -69,13 +69,13 @@ export function Testimonials() {
 	}, [isPaused, nextSlide]);
 
 	return (
-		<section id="testimonials" className="py-20 bg-gray-900">
+		<section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<AnimatedSection className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4 text-white">
+				<AnimatedSection className="text-center mb-12 sm:mb-16">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white">
 						{t("testimonials.title")}
 					</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+					<p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("testimonials.description")}
 					</p>
 				</AnimatedSection>
@@ -97,7 +97,7 @@ export function Testimonials() {
 								>
 									<AnimatedSection>
 										<Card className="bg-gray-800 border-gray-700 max-w-3xl mx-auto">
-											<CardContent className="p-8 md:p-12">
+											<CardContent className="p-6 sm:p-8 md:p-12">
 												<Quote className="w-12 h-12 text-blue-500 mb-6 opacity-50" />
 												<p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
 													{t(testimonial.contentKey)}
@@ -126,27 +126,27 @@ export function Testimonials() {
 					<button
 						type="button"
 						onClick={prevSlide}
-						className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:translate-x-0 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors shadow-lg"
+						className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 sm:p-3 rounded-full transition-colors shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
 						aria-label={t("testimonials.previous")}
 					>
-						<ChevronLeft size={24} />
+						<ChevronLeft size={20} className="sm:w-6 sm:h-6" />
 					</button>
 					<button
 						type="button"
 						onClick={nextSlide}
-						className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-0 bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors shadow-lg"
+						className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 sm:p-3 rounded-full transition-colors shadow-lg min-w-[44px] min-h-[44px] flex items-center justify-center"
 						aria-label={t("testimonials.next")}
 					>
-						<ChevronRight size={24} />
+						<ChevronRight size={20} className="sm:w-6 sm:h-6" />
 					</button>
 
-					<div className="flex justify-center gap-2 mt-8">
+					<div className="flex justify-center gap-3 mt-6 sm:mt-8">
 						{testimonials.map((_, index) => (
 							<button
 								key={testimonials[index].id}
 								type="button"
 								onClick={() => setCurrentIndex(index)}
-								className={`w-3 h-3 rounded-full transition-colors ${
+								className={`w-3 h-3 rounded-full transition-colors p-2 box-content ${
 									index === currentIndex
 										? "bg-blue-500"
 										: "bg-gray-600 hover:bg-gray-500"

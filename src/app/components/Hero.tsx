@@ -27,12 +27,12 @@ export function Hero() {
 							<span className="text-sm">{t("hero.badge")}</span>
 						</div>
 
-						<h1 className="text-5xl md:text-6xl lg:text-7xl text-white">
+						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
 							{t("hero.title")}{" "}
 							<span className="text-blue-400">{t("hero.titleHighlight")}</span>
 						</h1>
 
-						<p className="text-xl text-gray-300">{t("hero.description")}</p>
+						<p className="text-base sm:text-lg md:text-xl text-gray-300">{t("hero.description")}</p>
 
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Link to="/contact">
@@ -52,28 +52,28 @@ export function Hero() {
 							</Button>
 						</div>
 
-						<div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-700">
-							<div>
-								<div className="text-3xl font-bold text-blue-400">
+						<div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-6 sm:pt-8 border-t border-gray-700">
+							<div className="text-center sm:text-left">
+								<div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">
 									{t("hero.stats.projects")}
 								</div>
-								<div className="text-sm text-gray-400">
+								<div className="text-xs sm:text-sm text-gray-400">
 									{t("hero.stats.projectsLabel")}
 								</div>
 							</div>
-							<div>
-								<div className="text-3xl font-bold text-blue-400">
+							<div className="text-center sm:text-left">
+								<div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">
 									{t("hero.stats.satisfaction")}
 								</div>
-								<div className="text-sm text-gray-400">
+								<div className="text-xs sm:text-sm text-gray-400">
 									{t("hero.stats.satisfactionLabel")}
 								</div>
 							</div>
-							<div>
-								<div className="text-3xl font-bold text-blue-400">
+							<div className="text-center sm:text-left">
+								<div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">
 									{t("hero.stats.experience")}
 								</div>
-								<div className="text-sm text-gray-400">
+								<div className="text-xs sm:text-sm text-gray-400">
 									{t("hero.stats.experienceLabel")}
 								</div>
 							</div>

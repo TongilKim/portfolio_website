@@ -37,16 +37,16 @@ export function Services() {
 	}) as ServiceItem[];
 
 	return (
-		<section id="services" className="py-20 bg-gray-900">
+		<section id="services" className="py-12 sm:py-16 md:py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<AnimatedSection className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("services.title")}</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+				<AnimatedSection className="text-center mb-12 sm:mb-16">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white">{t("services.title")}</h2>
+					<p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("services.description")}
 					</p>
 				</AnimatedSection>
 
-				<StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
+				<StaggerContainer className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8" staggerDelay={0.15}>
 					{services.map((service, index) => {
 						const Icon = iconMap[index] || Code;
 						return (
@@ -85,8 +85,8 @@ export function Services() {
 				</StaggerContainer>
 
 				{/* Section CTA */}
-				<AnimatedSection delay={0.3} className="mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 border border-blue-500/30">
-					<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+				<AnimatedSection delay={0.3} className="mt-12 sm:mt-16 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-8 md:p-12 border border-blue-500/30">
+					<h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
 						{t("services.cta.section")}
 					</h3>
 					<p className="text-blue-100 mb-6 max-w-xl mx-auto">

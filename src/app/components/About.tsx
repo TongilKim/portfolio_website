@@ -9,12 +9,12 @@ export function About() {
 	const skills = t("about.skills", { returnObjects: true }) as string[];
 
 	return (
-		<section id="about" className="py-20 bg-gray-900">
+		<section id="about" className="py-12 sm:py-16 md:py-20 bg-gray-900">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="grid md:grid-cols-2 gap-12 items-center">
+				<div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
 					<AnimatedSection direction="left">
-						<h2 className="text-4xl md:text-5xl mb-6 text-white">{t("about.title")}</h2>
-						<div className="space-y-4 text-lg text-gray-300">
+						<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-white">{t("about.title")}</h2>
+						<div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-gray-300">
 							{paragraphs.map((paragraph) => (
 								<p key={paragraph}>{paragraph}</p>
 							))}
@@ -29,10 +29,10 @@ export function About() {
 					</AnimatedSection>
 
 					<AnimatedSection direction="right" delay={0.2}>
-						<h3 className="text-2xl font-bold mb-6 text-white">
+						<h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">
 							{t("about.skillsTitle")}
 						</h3>
-						<div className="grid grid-cols-2 gap-4">
+						<div className="grid grid-cols-2 gap-3 sm:gap-4">
 							{skills.map((skill) => (
 								<div key={skill} className="flex items-center gap-2 text-gray-200">
 									<CheckCircle

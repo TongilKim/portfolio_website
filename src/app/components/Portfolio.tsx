@@ -34,16 +34,16 @@ export function Portfolio() {
 	}) as ProjectItem[];
 
 	return (
-		<section id="portfolio" className="py-20 bg-gray-800">
+		<section id="portfolio" className="py-12 sm:py-16 md:py-20 bg-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<AnimatedSection className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4 text-white">{t("portfolio.title")}</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+				<AnimatedSection className="text-center mb-12 sm:mb-16">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white">{t("portfolio.title")}</h2>
+					<p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("portfolio.description")}
 					</p>
 				</AnimatedSection>
 
-				<StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
+				<StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8" staggerDelay={0.15}>
 					{projects.map((project, index) => (
 						<motion.div key={project.title} variants={staggerItemVariants}>
 							<Card className="group overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 transition-shadow bg-gray-900 border-gray-700 h-full">

@@ -47,19 +47,19 @@ export function CaseStudies() {
 	}) as CaseStudyItem[];
 
 	return (
-		<section id="case-studies" className="py-20 bg-gray-800">
+		<section id="case-studies" className="py-12 sm:py-16 md:py-20 bg-gray-800">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<AnimatedSection className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl mb-4 text-white">
+				<AnimatedSection className="text-center mb-12 sm:mb-16">
+					<h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 text-white">
 						{t("caseStudies.title")}
 					</h2>
-					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+					<p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
 						{t("caseStudies.description")}
 					</p>
 				</AnimatedSection>
 
 				<StaggerContainer
-					className="grid md:grid-cols-2 gap-8"
+					className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
 					staggerDelay={0.2}
 				>
 					{caseStudies.map((study, index) => (
